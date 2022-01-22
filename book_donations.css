@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto+Slab&display=swap");
+
+.bookCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bookCard {
+    width: 500px;
+    height: 200px;
+    box-shadow: 0 0 20px #aaa;
+    border-radius: 5px;
+    display: flex;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.bookCard:hover {
+    box-shadow: 0 0 20px #777;
+}
+
+.bookCard h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.bookCard h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: gray;
+}
+
+.bookCard .book-description {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000;
+    padding: 3px 0px;
+    margin: 0;
+}
+
+.bookCard .donor-details {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+}
+
+.bookCard img {
+    height: 100%;
+    aspect-ratio: 0.75;
+    width: 30%;
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.bookCardDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.bookCardDetails h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.tags {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tag {
+    display: inline;
+    background-color: black;
+    width: fit-content;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 5px 5px 5px 0;
+    padding: 5px;
+}
+
+.donor-name,
+.donor-contact {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .bookCard {
+        width: 85%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .bookCard img {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+
+    .bookCardDetails {
+        width: 100%;
+        height: auto;
+    }
+
+    .bookCardDetails h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .bookCardDetails h5 {
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+
+    .bookCard .book-description {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #000;
+        padding: 3px 0px;
+        margin: 0;
+    }
+
+    .bookCard .donor-details {
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin: 0;
+        color: #000;
+    }
+
+    .tags {
+        display: inline;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tag {
+        display: inline;
+        background-color: black;
+        width: fit-content;
+        border-radius: 5px;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin: 5px 5px 5px 0;
+        padding: 5px;
+    }
+}
+body {
+    background-color: white;
+}
+form {
+    display: flex;
+    flex-direction: row;
+}
+* {
+    outline: none !important;
+}
+
+a {
+    display: flex;
+    margin-top: 20px;
+    color: inherit;    
+}
+input[type=submit]{
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    font-size: 20px; 
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    height: 30px;
+    width: 100px;
+}
+hr.solid {
+    border-top: 5px solid rgb(94, 92, 92);
+}
+

@@ -1,0 +1,19 @@
+.images{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.imgmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.images img{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+p{
+    font-size: x-large;
+}
