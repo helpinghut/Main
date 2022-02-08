@@ -80,6 +80,7 @@
 .footer .verified-by {
     max-width: 300px;
     margin: 0 auto;
+    margin-top: 15px;
     text-align: center;
 }
 
