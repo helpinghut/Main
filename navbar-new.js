@@ -54,6 +54,7 @@ fetch('./navbar-new.html').then(function (response) {
     html = doc.getElementsByTagName('nav')[0].innerHTML;
     // insert the nav html
     current_nav.innerHTML = html;
+    current_nav.classList.add('navbar-1');
 
     let toggleScript = doc.getElementById('navbar-new-toggle-script');
     let scriptToinsert = document.createElement('script');
