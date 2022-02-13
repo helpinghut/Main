@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: 'Droid Sans', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .main-content {
+        background-color: black;
+      }
+
+      #slider {
+        margin: 0 auto;
+        width: 80%;
+        overflow: hidden;
+      }
+
+      .slides {
+        overflow: hidden;
+        animation-name: fade;
+        animation-duration: 1s;
+        display: none;
+      }
+
+      slides img {
+        width: 100%;
+      }
+
+      #dot {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .dot {
+        display: inline-block;
+        border-radius: 50%;
+        background: #d3d3d3;
+        padding: 8px;
+        margin: 10px 5px;
+      }
+
+      .active {
+        background: rgb(90, 89, 89);
+      }
+
+      @media (max-width: 567px) {
+        #slider {
+          width: 100%;
+        }
+      }
+
+      #heading {
+        display: block;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 7em;
+        margin: 10px 0px;
+      }
+
+      .about-us {
+        padding: 30px 0;
+        background-color: #ececec;
+      }
+      .about-us .h1 {
+        font-size: 50px;
+        color: #848484;
+      }
+      .about-us .responsive-paragraph {
+        color: #848484;
+        font-size: 20px;
+      }
+    </style>
+    <nav></nav>
+    <script src="navbar-new.js"></script>
+    <div class="main-content">
+      <span id="heading">OVERVIEW</span>
+      <div id="slider">
+        <div class="slides">
+          <img src="slide1.jpg" width="100%" />
+        </div>
+        <div class="slides">
+          <img src="slide2.jpg" width="100%" />
+        </div>
+        <div class="slides">
+          <img src="slide3.jpg" width="100%" />
+        </div>
+        <div id="dot">
+          <span class="dot"></span><span class="dot"></span
+          ><span class="dot"></span>
+        </div>
+      </div>
+      <div class="about-us">
+        <div class="container">
+          <h2 class="h1 text-center">About Us</h2>
+          <p class="responsive-paragraph">
+            Helping Hut NGO was started with a vibrant vision to create a NO
+            beggar environment around us and ensure every needy gets the right of
+            living. Its mission is to provide employment opportunities to as many
+            beggars as it can and make society beggar free.
+          </p>
+          <p class="responsive-paragraph">
+            Being started like a drop of help in the ocean of problems people face
+            in their life, Helping Hut NGO aims to cater to all those in need. To
+            feed the starving, to bring a small ray of happiness by doing small
+            things actually do not need a million dollars and with little love,
+            little care and a little change to our lifestyles, we as people can
+            create an impact on someone's life.
+          </p>
+          <p class="responsive-paragraph">
+            Helping Hut NGO thus organises various activities which include online
+            campaigns, ground work and enthusiastic competitions to bring out the
+            best in you. Some of our online campaigns were on to save water, to
+            plant more trees and the most impactful Utthan Abhiyan which was a
+            step towards awareness of government policies to the needy one.
+            Various competitions organised touched many aspects of our life
+            through art and craft, poetry, creative writing and enhancing
+            knowledge through quizzes. The topics selected were interesting as
+            well as important in one's life such as 'Health and Unite India' ,
+            'Mental Health and Corona as a Medical and Social Problem' and many
+            more.
+          </p>
+          <p class="responsive-paragraph">
+            Ground work encourages our helping hut soldiers to bring a smile on a
+            needy's face through their constant efforts. It also helps to spread
+            awareness among the people. It included distribution drives of masks,
+            education kits, clothes etc. It also included the noble work of
+            spreading education among urban poor and rural children so that they
+            can also get an opportunity to fly with their wings of education and
+            soar to great heights.
+          </p>
+          <p class="responsive-paragraph">
+            Thus, Helping Hut NGO started with a single ray of help wishes to
+            spread like sunshine and to bring people out of darkness of deprived
+            knowledge and resources. We work to ensure every needy gets the right
+            of living.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="footer-new.js"></script>
+
+    <script>
+      var index = 0;
+      var slides = document.querySelectorAll(".slides");
+      var dot = document.querySelectorAll(".dot");
+
+      function changeSlide() {
+        if (index < 0) {
+          index = slides.length - 1;
+        }
+
+        if (index > slides.length - 1) {
+          index = 0;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          dot[i].classList.remove("active");
+        }
+
+        slides[index].style.display = "block";
+        dot[index].classList.add("active");
+
+        index++;
+
+        setTimeout(changeSlide, 2000);
+      }
+
+      changeSlide();
+    </script>
+  </body>
+</html>
