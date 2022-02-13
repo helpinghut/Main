@@ -18,12 +18,14 @@ html {
 .main-nav {
     list-style-type: none;
     display: none;
+    background-color: white;
 }
 
 .nav-links,
 .logo {
     text-decoration: none;
     color: black;
+    padding: 4px 0;
 }
 
 .main-nav li {
@@ -40,7 +42,7 @@ html {
     margin-left: 20px;
 }
 
-.navbar-toggle {
+.my-navbar-toggle {
     float: right;
     margin-right: 20px;
     cursor: pointer;
@@ -48,7 +50,7 @@ html {
     margin-top: 30px;
 }
 
-.dropdown-content a {
+.my-dropdown-content a {
     float: none;
     color: rgb(68, 68, 68);
     padding: 12px 16px;
@@ -58,12 +60,12 @@ html {
     display: block;
 }
 
-.dropdown-content {
+.my-dropdown-content {
     display: none;
 }
 
-.active,
-.active a {
+.my-nav-active,
+.my-nav-active a {
     display: block;
 }
 
@@ -79,8 +81,11 @@ html {
     .main-nav {
         display: flex;
         margin-right: 30px;
+        margin-top: 25px;
         flex-direction: row;
         justify-content: flex-end;
+        width: fit-content;
+        float: right;
     }
 
     .main-nav li {
@@ -95,7 +100,7 @@ html {
         margin-top: 0;
     }
 
-    .navbar-toggle {
+    .my-navbar-toggle {
         display: none;
         color: black;
     }
@@ -105,14 +110,14 @@ html {
         color: black;
     }
 
-    .dropdown-content a:hover {
+    .my-dropdown-content a:hover {
         background-color: #ddd;
     }
 
-    .dropdown:hover .dropdown-content {
+    .my-dropdown:hover .my-dropdown-content {
         display: block;
     }
-    .dropdown-content a {
+    .my-dropdown-content a {
         float: none;
         color: black;
         padding: 12px 16px;
@@ -120,12 +125,12 @@ html {
         display: block;
         text-align: left;
     }
-    .dropdown {
+    .my-dropdown {
         float: left;
         overflow: hidden;
     }
 
-    .dropdown-content {
+    .my-dropdown-content {
         display: none;
         position: absolute;
         background-color: #f9f9f9;

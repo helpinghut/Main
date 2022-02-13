@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.13/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
         integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
 
 <body>
     <nav class="navbar-1">
-        <span class="navbar-toggle" id="js-navbar-toggle">
+        <span class="my-navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
         </span>
         <a href="index.html" class="logo"><img src="logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
@@ -23,9 +23,9 @@
             <li>
                 <a href="index.html" class="nav-links">Home</a>
             </li>
-            <li class="dropdown" id="about-us-toggle">
+            <li class="my-dropdown" id="about-us-toggle">
                 <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content" id="about-us-menu">
+                <div class="my-dropdown-content" id="about-us-menu">
                     <a href="Campaign.html">Overview</a>
                     <a href="CELEBRATIONS.html">Our Motive</a>
                     <a href="drives.html">Governing Body</a>
@@ -35,9 +35,9 @@
                     <a href="drives.html">Media Coverage</a>
                 </div>
             </li>
-            <li class="dropdown" id="our-works-toggle">
+            <li class="my-dropdown" id="our-works-toggle">
                 <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content" id="our-works-menu">
+                <div class="my-dropdown-content" id="our-works-menu">
                     <a href="Campaign.html">Campaigns</a>
                     <a href="CELEBRATIONS.html">Celebrations</a>
                     <a href="drives.html">Drives</a>
@@ -47,7 +47,7 @@
                 <a href="book_donations.html" class="nav-links">Book Donations</a>
             </li>
             <li>
-                <a href="#botbot" class="nav-links">Contact Us</a>
+                <a href="contact.html" class="nav-links">Contact Us</a>
             </li>
         </ul>
     </nav>
@@ -57,14 +57,14 @@
         let navBarToggle = document.getElementById("js-navbar-toggle");
 
         navBarToggle.addEventListener("click", function () {
-            mainNav.classList.toggle("active");
+            mainNav.classList.toggle("my-nav-active");
         });
         //  accordian for about us item
         let aboutUsMenu = document.getElementById("about-us-menu");
         let aboutUsToggle = document.getElementById("about-us-toggle");
 
         aboutUsToggle.addEventListener("click", function () {
-            aboutUsMenu.classList.toggle("active");
+            aboutUsMenu.classList.toggle("my-nav-active");
         });
 
         // accordian for our works item
@@ -72,7 +72,7 @@
         let ourWorksToggle = document.getElementById("our-works-toggle");
 
         ourWorksToggle.addEventListener("click", function () {
-            ourWorksMenu.classList.toggle("active");
+            ourWorksMenu.classList.toggle("my-nav-active");
         });
     </script>
 </body>
