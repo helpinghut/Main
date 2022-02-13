@@ -214,8 +214,8 @@ form {
     outline: none !important;
 }
 
-a {
-/*     display: flex; */
+main a {
+    display: flex;
     margin-top: 20px;
     color: inherit;    
 }
