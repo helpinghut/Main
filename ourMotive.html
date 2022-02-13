@@ -1,0 +1,340 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="navbar-new.css">
+    <link rel="stylesheet" href="footer-new.css">
+  </head>
+  <body>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      *::selection {
+        color: #000;
+        background-color: #dfdfdf;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .body-main {
+        min-height: 100vh;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #dfdfdf;
+        background-color: #000;
+      }
+      .container {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 0 6rem 6rem 6rem;
+      }
+
+      .page-title {
+        margin-bottom: 8rem;
+        font-family: "Anton", sans-serif;
+        font-size: 12rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: -0.4px;
+        line-height: 12rem;
+        color: #fafafa;
+      }
+      @media only screen and (max-width: 760px) {
+        .page-title {
+          margin-bottom: 6rem;
+          font-size: 8rem;
+        }
+      }
+      @media only screen and (max-width: 580px) {
+        .page-title {
+          margin-bottom: 4rem;
+          font-size: 7rem;
+        }
+      }
+      @media only screen and (max-width: 370px) {
+        .page-title {
+          margin-bottom: 0;
+          font-size: 5rem;
+        }
+      }
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      @media only screen and (max-width: 760px) {
+        .content {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+        }
+      }
+      .content__descriptor {
+        width: 14%;
+        border-top: 1px solid #7b7b7b;
+        padding-top: 4rem;
+      }
+      @media only screen and (max-width: 760px) {
+        .content__descriptor {
+          width: 100%;
+          padding: 2rem 0;
+          border-top: none;
+        }
+      }
+      .content__title {
+        font-size: 4rem;
+        font-weight: 500;
+      }
+      .content__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1.7rem;
+        width: 50%;
+        border-top: 1px solid #7b7b7b;
+        border-bottom: 1px solid #7b7b7b;
+        margin-right: 10rem;
+        padding: 4rem 0;
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: 920px) {
+        .content__text-box {
+          margin-right: 0;
+        }
+      }
+      @media only screen and (max-width: 760px) {
+        .content__text-box {
+          width: 100%;
+          padding: 2rem 0;
+        }
+      }
+      @media only screen and (max-width: 580px) {
+        .content__text-box {
+          border-bottom: none;
+        }
+      }
+      .content__text {
+        width: 320px;
+      }
+      @media only screen and (max-width: 580px) {
+        .content__text {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+<nav class="navbar-1">
+  <span class="my-navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+  </span>
+  <a href="index.html" class="logo"><img src="logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
+  <ul class="main-nav" id="js-menu">
+      <li>
+          <a href="index.html" class="nav-links">Home</a>
+      </li>
+      <li class="my-dropdown" id="about-us-toggle">
+          <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
+          <div class="my-dropdown-content" id="about-us-menu">
+              <a href="Campaign.html">Overview</a>
+              <a href="CELEBRATIONS.html">Our Motive</a>
+              <a href="drives.html">Governing Body</a>
+              <a href="drives.html">Team Representatives</a>
+              <a href="drives.html">Our Reach</a>
+              <a href="drives.html">Our Impact</a>
+              <a href="drives.html">Media Coverage</a>
+          </div>
+      </li>
+      <li class="my-dropdown" id="our-works-toggle">
+          <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
+          <div class="my-dropdown-content" id="our-works-menu">
+              <a href="Campaign.html">Campaigns</a>
+              <a href="CELEBRATIONS.html">Celebrations</a>
+              <a href="drives.html">Drives</a>
+          </div>
+      </li>
+      <li>
+          <a href="book_donations.html" class="nav-links">Book Donations</a>
+      </li>
+      <li>
+          <a href="contact.html" class="nav-links">Contact Us</a>
+      </li>
+  </ul>
+</nav>
+<script id="navbar-new-toggle-script">
+  // accordian for main nav
+  let mainNav = document.getElementById("js-menu");
+  let navBarToggle = document.getElementById("js-navbar-toggle");
+
+  navBarToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("my-nav-active");
+  });
+  //  accordian for about us item
+  let aboutUsMenu = document.getElementById("about-us-menu");
+  let aboutUsToggle = document.getElementById("about-us-toggle");
+
+  aboutUsToggle.addEventListener("click", function () {
+      aboutUsMenu.classList.toggle("my-nav-active");
+  });
+
+  // accordian for our works item
+  let ourWorksMenu = document.getElementById("our-works-menu");
+  let ourWorksToggle = document.getElementById("our-works-toggle");
+
+  ourWorksToggle.addEventListener("click", function () {
+      ourWorksMenu.classList.toggle("my-nav-active");
+  });
+</script>
+
+<div class="body-main">
+    <div class="container">
+      <header>
+        <h1 class="page-title">Our Motive</h1>
+      </header>
+      <main>
+        <article class="content">
+          <section class="content__descriptor">
+            <h2 class="content__title">Our Vision</h2>
+          </section>
+          <section class="content__text-box">
+            <p>
+              “A vision is not just a picture of what could be; it is an appeal
+              to our better selves, a call to become something more” -Rosabeth
+              Moss Kanter
+              </p>
+              <p>
+            We at HELPING HUT NGO envision building a just and compassionate society
+            by organizing various drives, campaigns, interactive sessions, and raising
+            funds for the needy in order to make this world a better place to live in.
+            
+            </p>
+          </section>
+        </article>
+
+        <article class="content">
+          <section class="content__descriptor">
+            <h2 class="content__title">Our Aim</h2>
+          </section>
+          <section class="content__text-box">
+            <p>
+              TO PUT AN END TO BEGGARY
+              Beggary is not an option for livelihood. We aim to provide beggars
+              occupation for their livelihood which is totally suitable for them and beneath
+              their ability
+            </p>
+            <p>
+              EDUCATION FOR EVERYONE
+              Money should not be a reason for poor kids not getting an education. We
+              provide free education to poor children rural areas
+            </p>
+          </section>
+        </article>
+
+        <article class="content">
+          <section class="content__descriptor">
+            <h2 class="content__title">Our Mission</h2>
+          </section>
+          <section class="content__text-box">
+            <p>
+              Our non-profit organization exists with the core mission to create a world
+              where everyone has a decent place to live and to leave a sustainable world for
+              future generations. We work to ensure that every needy person gets their
+              right to living. We are a bunch of students who formed this NGO with the
+              visions like helping poor in any way possible, stopping beggary by giving
+              them some occupation and helping poor kids in getting education. And we
+              aim to achieve that by collecting monthly funds from our team and volunteers
+              and later spend that fund on implementation of our vision. We start at least 2
+              campaigns per month to achieve our goals sustainably
+            </p>
+          </section>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <div class="footer" id="footer-new">
+    <div class="inner-footer">
+        <div class="footer-items" style="padding:0 10px;">
+            <h3 style="font-size: 20px;">Helping Hut</h3>
+            <p>Helping Hut is a not for profit non government organization with the visions like helping poor in any
+                way possible, stopping beggary
+                by giving them some occupation and helping poor kids in getting education.</p>
+            <div class="verified-by">
+                <h6 class="verified_heading">Verified by</h6>
+                <div class="verified_logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/NITI_Aayog_logo.svg/1200px-NITI_Aayog_logo.svg.png"
+                        alt="NITI AAYOG">
+                    <img src="https://ngodarpan.gov.in/assets/images/Darpan-logo.png" alt="NGO Darpan">
+                </div>
+            </div>
+        </div>
+        <div class="footer-items" style="max-width:200px;">
+            <h2 class="footer_heading">Quick Links</h2>
+            <div class="border"></div>
+            <ul class="footer_list">
+                <li class="list-list-item"><a class="" href="/TermsAndConditions.html">Terms and Conditions</a></li>
+                <li class="list-list-item"><a class="" href="/privacyPolicy.html">Privacy Policy</a></li>
+                <li class="list-list-item"><a class="" href="https://drive.google.com/file/d/1LKJe9UliFs8g2wqxUMCBLF78LTiqiuj6/view?usp=sharing">Annual Magazine</a></li>
+                <li class="list-list-item"><a class="" href="/institution-and-organization">Partners</a></li>
+            </ul>
+        </div>
+        <div class="footer-items" style="max-width:200px;">
+            <h2 class="footer_heading">Get Involved</h2>
+            <div class="border"></div>
+            <ul class="footer_list">
+                <li><a class="" href="/careers">Careers</a></li>
+                <li><a class="" href="/Partnership">Partnership</a></li>
+                <li><a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">Volunteer</a></li>
+            </ul>
+        </div>
+        <div class="footer-items">
+            <h2 class="footer_heading" id="botbot">Contact Us</h2>
+            <div class="border"></div>
+            <ul class="footer_list" style="font-size:14px;">
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Plot No.: 147 A, Street No. 5,
+                    D-Block, Bharat Vihar, Kakrola, Dwarka, Delhi - 110078</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+91 8924879117</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;<a href="mailto:contact@helpinghutngo.in" style="text-decoration: none; color: rgb(211,211,211)">contact@helpinghutngo.in</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/helpinghutngo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/helping_hut/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/HelpingHut" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/helping_hut" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/search/results/all/?keywords=helping%20hut%20&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bf1312c1-105c-4871-8895-632e95d4592c&sid=7cg" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/helpinghutngo" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">Copyright ©
+        <script>document.write(new Date().getFullYear())</script> Helping Hut NGO. All rights reserved.
+    </div>
+
+  <script src="navbar-new.js"></script>
+  <script src="footer-new.js"></script>
+  </body>
+</html>

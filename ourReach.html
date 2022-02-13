@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="navbar-new.css">
+    <link rel="stylesheet" href="footer-new.css">
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:wght@500&family=Lateef&family=Lato&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .body-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1rem;
+        background-color: rgb(0, 0, 0);
+      }
+
+      .ourReach h1 {
+        font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
+          "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black",
+          "sans serif";
+        margin: 50px 0 0 0;
+        font-size: 6rem;
+        font-weight: bolder;
+        padding-top: 50px;
+      }
+
+      .card-container {
+        display: flex;
+        margin: 80px auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: 70%;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card-container > div {
+        margin: 3em;
+      }
+
+      .panel,
+      .card {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        max-width: 250px;
+        min-width: 100px;
+        border: solid 1px #000;
+        border-radius: 20px;
+
+        filter: drop-shadow(1px 10px 5px rgba(0, 0, 0, 0.4));
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      .card:hover {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+        z-index: 99;
+      }
+
+      .card:not(hover) {
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+      }
+
+      .card1 {
+        transform: scale(1.2);
+        background-image: url("slide4.jpg");
+        background-position: center;
+      }
+
+      .card > h2 {
+        color: gray;
+        font-family: "Anton", sans-serif;
+        font-size: 3rem;
+        position: absolute;
+        top: 250px;
+        left: 23%;
+      }
+
+     .card > h3 {
+        color: gray;
+        font-family: "Anton", sans-serif;
+        font-size: 2.7rem;
+        position: absolute;
+        top: 290px;
+        left: 23%;
+     }
+
+     .card > h4 {
+        color: gray;
+        font-family: "Anton", sans-serif;
+        font-size: 2.7rem;
+        position: absolute;
+        top: 340px;
+        left: 23%;
+     }
+
+      .card1:hover {
+        background-position: left;
+        transition: 1s ease-in;
+      }
+
+      .card2 {
+        background-image: url("cl2.jpg");
+        background-position: left;
+      }
+
+      .card2:hover {
+        background-position: center;
+        transition: 1s ease-in;
+      }
+
+      .card3 {
+        background-image: url("food1.jpg");
+        background-position: left;
+      }
+
+      .card3:hover {
+        background-position: center;
+        transition: 1s ease-in;
+      }
+
+      .card4 {
+        background-image: url("help2.png");
+        background-position: center;
+      }
+
+      .card4:hover {
+        background-position: right;
+        transition: 1s ease-in;
+      }
+
+      @media (max-width: 900px) {
+        h1 {
+          text-align: center;
+        }
+        .card-container {
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin: auto;
+          align-items: center;
+        }
+      }
+    </style>
+
+<nav class="navbar-1">
+  <span class="my-navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+  </span>
+  <a href="index.html" class="logo"><img src="logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
+  <ul class="main-nav" id="js-menu">
+      <li>
+          <a href="index.html" class="nav-links">Home</a>
+      </li>
+      <li class="my-dropdown" id="about-us-toggle">
+          <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
+          <div class="my-dropdown-content" id="about-us-menu">
+              <a href="Campaign.html">Overview</a>
+              <a href="CELEBRATIONS.html">Our Motive</a>
+              <a href="drives.html">Governing Body</a>
+              <a href="drives.html">Team Representatives</a>
+              <a href="drives.html">Our Reach</a>
+              <a href="drives.html">Our Impact</a>
+              <a href="drives.html">Media Coverage</a>
+          </div>
+      </li>
+      <li class="my-dropdown" id="our-works-toggle">
+          <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
+          <div class="my-dropdown-content" id="our-works-menu">
+              <a href="Campaign.html">Campaigns</a>
+              <a href="CELEBRATIONS.html">Celebrations</a>
+              <a href="drives.html">Drives</a>
+          </div>
+      </li>
+      <li>
+          <a href="book_donations.html" class="nav-links">Book Donations</a>
+      </li>
+      <li>
+          <a href="contact.html" class="nav-links">Contact Us</a>
+      </li>
+  </ul>
+</nav>
+<script id="navbar-new-toggle-script">
+  // accordian for main nav
+  let mainNav = document.getElementById("js-menu");
+  let navBarToggle = document.getElementById("js-navbar-toggle");
+
+  navBarToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("my-nav-active");
+  });
+  //  accordian for about us item
+  let aboutUsMenu = document.getElementById("about-us-menu");
+  let aboutUsToggle = document.getElementById("about-us-toggle");
+
+  aboutUsToggle.addEventListener("click", function () {
+      aboutUsMenu.classList.toggle("my-nav-active");
+  });
+
+  // accordian for our works item
+  let ourWorksMenu = document.getElementById("our-works-menu");
+  let ourWorksToggle = document.getElementById("our-works-toggle");
+
+  ourWorksToggle.addEventListener("click", function () {
+      ourWorksMenu.classList.toggle("my-nav-active");
+  });
+</script>
+
+<div class="body-main">
+    <h1 class="ourReach">OUR-REACH</h1>
+
+    <div class="card-container">
+      <div class="panel">
+        <div class="card card1">
+          <h2>1000 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+          <h3><i class="fa fa-book" aria-hidden="true"></i> Study kits</h3>
+          <h4>distributed</h4>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card card2">
+          <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+          <h3><i class="fa fa-black-tie" aria-hidden="true"></i> Clothes</h3>
+          <h4>distributed</h4>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card card3">
+          <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+          <h3><i class="fa fa-cutlery" aria-hidden="true"></i> Food Packets</h3>
+          <h4>distributed</h4>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card card4">
+          <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+          <h3><i class="fa fa-paw" aria-hidden="true"></i> Street animals</h3>
+          <h4>fed</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" id="footer-new">
+    <div class="inner-footer">
+        <div class="footer-items" style="padding:0 10px;">
+            <h3 style="font-size: 20px;">Helping Hut</h3>
+            <p>Helping Hut is a not for profit non government organization with the visions like helping poor in any
+                way possible, stopping beggary
+                by giving them some occupation and helping poor kids in getting education.</p>
+            <div class="verified-by">
+                <h6 class="verified_heading">Verified by</h6>
+                <div class="verified_logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/NITI_Aayog_logo.svg/1200px-NITI_Aayog_logo.svg.png"
+                        alt="NITI AAYOG">
+                    <img src="https://ngodarpan.gov.in/assets/images/Darpan-logo.png" alt="NGO Darpan">
+                </div>
+            </div>
+        </div>
+        <div class="footer-items" style="max-width:200px;">
+            <h2 class="footer_heading">Quick Links</h2>
+            <div class="border"></div>
+            <ul class="footer_list">
+                <li class="list-list-item"><a class="" href="/TermsAndConditions.html">Terms and Conditions</a></li>
+                <li class="list-list-item"><a class="" href="/privacyPolicy.html">Privacy Policy</a></li>
+                <li class="list-list-item"><a class="" href="https://drive.google.com/file/d/1LKJe9UliFs8g2wqxUMCBLF78LTiqiuj6/view?usp=sharing">Annual Magazine</a></li>
+                <li class="list-list-item"><a class="" href="/institution-and-organization">Partners</a></li>
+            </ul>
+        </div>
+        <div class="footer-items" style="max-width:200px;">
+            <h2 class="footer_heading">Get Involved</h2>
+            <div class="border"></div>
+            <ul class="footer_list">
+                <li><a class="" href="/careers">Careers</a></li>
+                <li><a class="" href="/Partnership">Partnership</a></li>
+                <li><a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">Volunteer</a></li>
+            </ul>
+        </div>
+        <div class="footer-items">
+            <h2 class="footer_heading" id="botbot">Contact Us</h2>
+            <div class="border"></div>
+            <ul class="footer_list" style="font-size:14px;">
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Plot No.: 147 A, Street No. 5,
+                    D-Block, Bharat Vihar, Kakrola, Dwarka, Delhi - 110078</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+91 8924879117</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;<a href="mailto:contact@helpinghutngo.in" style="text-decoration: none; color: rgb(211,211,211)">contact@helpinghutngo.in</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/helpinghutngo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/helping_hut/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/HelpingHut" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/helping_hut" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/search/results/all/?keywords=helping%20hut%20&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bf1312c1-105c-4871-8895-632e95d4592c&sid=7cg" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/helpinghutngo" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">Copyright ©
+        <script>document.write(new Date().getFullYear())</script> Helping Hut NGO. All rights reserved.
+    </div>
+
+  <script src="navbar-new.js"></script>
+  <script src="footer-new.js"></script>
+
+  </body>
+</html>
