@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@400&display=swap');
+
+*
+{
+    font-family: 'BioRhyme', serif;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    height: 60px;
+    width: 70px;
+}
+
+.heading h1{
+    padding-top: -5px;
+    padding-bottom: 10px;
+    font-family: 'BioRhyme', serif;
+    font-weight: bold;
+    font-weight: 300;
+
+}
+
+#fir
+{
+    padding: 25px 0;
+}
+
+p{
+    font-weight: 300;
+    font-family: 'BioRhyme', serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+}
+
+#sec
+{
+    background-color: black;
+    color: blanchedalmond;
+    text-align: right;
+    text-justify: auto;
+}
+
+#head {
+    background-color: black;
+    color: blanchedalmond;
+    text-align: left;
+    text-justify: left;
+}
+
