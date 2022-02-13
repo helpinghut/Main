@@ -139,3 +139,68 @@ html {
         z-index: 1;
     }
 }
+/*  Button css   */
+/* buttons */
+
+.btn-rk {
+    text-align: center;
+  }
+  .btn-hovers {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: -13px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    /* border-bottom-right-radius: 50px; */
+    /* border-top-left-radius: 50px; */
+    /* border-radius: 50px; */
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    /* border-end-start-radius: 50px; */
+  }
+  
+  .btn-hovers:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .btn-hovers:focus {
+    outline: none;
+  }
+  
+  .btn-hovers.color-1 {
+    background-image: linear-gradient(to right, rgb(26, 25, 25), rgb(34 34 34 / 87%), rgb(34 34 34 / 87%), rgb(26, 25, 25));
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+  .btn-hovers.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  }
+  .btn-hovers.color-6 {
+    background-image: linear-gradient(to right, rgb(26, 25, 25), rgb(34 34 34 / 87%), rgb(34 34 34 / 87%), rgb(26, 25, 25));
+    /* box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75); */
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .btn-hovers {
+      width: 100px;
+      margin: -3px;
+    }
+    .btn-rk {
+      text-align: center;
+    }
+  }
