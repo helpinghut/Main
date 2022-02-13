@@ -32,12 +32,12 @@
     padding: 25px 0;
 }
 
-p{
+main p{
     font-weight: 300;
     font-family: 'BioRhyme', serif;
 }
 
-img{
+main img{
     width: 100%;
     height: 100%;
     border: 10px solid black;
