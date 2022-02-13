@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="navbar-new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="footer-new.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Theme CSS -->
+    <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+
+    <!-- Kit -->
+    <script src="https://kit.fontawesome.com/f65934061a.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header,
+        .header1 {
+            background-color: rgb(78, 78, 78);
+            display: flex;
+            color: whitesmoke;
+            justify-content: space-between;
+        }
+
+        .header li,
+        .header1 li {
+            list-style: none;
+            padding: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .footer-for-empty {
+                /* position: fixed; */
+                bottom: 0;
+                left: 0;
+                width: 100%
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header li {
+                font-size: small;
+            }
+
+            .header1 li {
+                font-size: small;
+            }
+
+            footer {
+                font-size: 7px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            footer {
+                font-size: 7px;
+            }
+
+            .aboutus {
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+        .aboutus {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_foOsqgZ3ryu2Emi3plWRo");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="header">
+        <marquee behavior="" direction="left">
+            <li>HELPING HUT NGO</li>
+        </marquee>
+    </div>
+    <div class="row-1">
+        <nav class="navbar-1">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+            <a href="index.html" class="logo"><img src="/images/logo.jpg" width="70px" height="60px" alt=""
+                    srcset=""></a>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="index.html" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="Campaign.html" class="nav-links">Campaigns</a>
+                </li>
+                <li>
+                    <a href="Team.html" class="nav-links">Teams</a>
+                </li>
+                <li>
+                    <a href="CELEBRATIONS.html" class="nav-links">Celebrations</a>
+                </li>
+                <li>
+                    <a href="drives.html" class="nav-links">Drives</a>
+                </li>
+                <li>
+                    <a href="book_donations.html" class="nav-links">Book Donations</a>
+                <li>
+                    <a href="/contact.html" class="nav-links">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <script src="navbar-new.js"></script>
+        <h1 style="text-align: center; color: rgb(0,0,0); margin: 10px 0px;">Contact Us</h1>
+
+
+        <!-- **************** MAIN CONTENT START **************** -->
+        <main>
+
+            <!-- =======================
+    Page Banner START -->
+            <section class="pt-5 pb-0"
+                style="background-image:url(assets/images/element/map.svg); background-position: center left; background-size: cover;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-xl-6 text-center mx-auto">
+                            <!-- Title -->
+                            <!-- <h6 class="text-primary">Contact us</h6> -->
+                            <h1 class="mb-4">We're here to help!</h1>
+                        </div>
+                    </div>
+
+                    <!-- Contact info box -->
+                    
+
+                        <!-- Box item -->
+                        <div class="col-lg-12 mt-lg-0">
+                            <div class="card card-body shadow py-5 text-center h-100  bg-secondary text-white">
+                                <!-- Title -->
+                                <h5 class="mb-3">Contact Address</h5>
+                                <ul class="list-inline mb-0">
+                                    <!-- Address -->
+                                    <li class="list-item mb-3 h5 fw-light">
+                                        <i class="fas fa-fw fa-map-marker-alt me-2 mt-1"></i>Plot No.: 147
+                                            A, Street No. 5, D-Block, Bharat Vihar, Kakrola, Dwarka, Delhi - 110078
+                                    </li>
+                                    <!-- Phone number -->
+                                    <li class="list-item mb-3 h5 fw-light">
+                                        <i class="fas fa-fw fa-phone me-2"></i>+91 8924879117
+                                    </li>
+                                    <!-- Email id -->
+                                    <li class="list-item mb-0 h5 fw-light">
+                                        <i class="far fa-fw fa-envelope me-2"></i>contact@helpinghutngo.in
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Box item -->
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- =======================
+    Page Banner END -->
+
+            <!-- =======================
+    Image and contact form START -->
+            <section>
+                <div class="container">
+                    <div class="row g-4 g-lg-0 align-items-center">
+
+                        <div class="col-md-6 align-items-center text-center">
+                            <!-- Image -->
+                            <img src="assets/images/element/contact.svg" class="h-400px" alt="">
+
+                            <!-- Social media button -->
+                            <div class="d-sm-flex align-items-center justify-content-center mt-2 mt-sm-4">
+                                <h5 class="mb-0">Follow us on:</h5>
+                                <ul class="list-inline mb-0 ms-sm-2">
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-facebook"
+                                            href="https://www.facebook.com/helpinghutngo/"><i
+                                                class="fab fa-fw fa-facebook-square"></i></a> </li>
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-instagram"
+                                            href="https://www.instagram.com/helping_hut/"><i
+                                                class="fab fa-fw fa-instagram"></i></a> </li>
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-twitter"
+                                            href="https://twitter.com/helping_hut"><i
+                                                class="fab fa-fw fa-twitter"></i></a> </li>
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-linkedin"
+                                            href="https://www.linkedin.com/search/results/all/?keywords=helping%20hut%20&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bf1312c1-105c-4871-8895-632e95d4592c&sid=7cg"><i
+                                                class="fab fa-fw fa-linkedin-in"></i></a> </li>
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-youtube"
+                                            href="https://www.youtube.com/c/HelpingHut"><i
+                                                class="fab fa-fw fa-youtube"></i></a> </li>
+                                    <li class="list-inline-item"> <a class="fs-5 me-1 text-telegram"
+                                            href="https://t.me/helpinghutngo"><i class="fab fa-fw fa-telegram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Contact form START -->
+                        <div class="col-md-6">
+                            <!-- Title -->
+                            <h2 class="mt-4 mt-md-0">Let's talk</h2>
+                            <p>To request a quote or want to meet up for coffee, contact us directly or fill out the
+                                form
+                                and we will get back to you promptly</p>
+
+                            <form id="contact-form">
+                                <!-- Name -->
+                                <div class="mb-4 bg-light-input">
+                                    <label for="yourName" class="form-label">Your name *</label>
+                                    <input type="text" class="form-control form-control-lg" id="yourName" required>
+                                </div>
+                                <!-- Email -->
+                                <div class="mb-4 bg-light-input">
+                                    <label for="emailInput" class="form-label">Email address *</label>
+                                    <input type="email" class="form-control form-control-lg" id="emailInput" required>
+                                </div>
+                                <!-- Message -->
+                                <div class="mb-4 bg-light-input">
+                                    <label for="textareaBox" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="textareaBox" rows="4" required></textarea>
+                                </div>
+                                <!-- Button -->
+                                <div class="d-grid">
+                                    <button class="btn btn-lg btn-primary mb-0" type="submit" value="send">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Contact form END -->
+                    </div>
+                </div>
+            </section>
+            <!-- =======================
+    Image and contact form END -->
+
+            <!-- =======================
+    Map START -->
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <iframe class="w-100 h-400px grayscale rounded"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.7329902525744!2d77.02812271440668!3d28.607785991952788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05d26dfc91df%3A0x76fd2e6915cbfaff!2sHelping%20Hut%20(NGO)!5e0!3m2!1sen!2sin!4v1644317875576!5m2!1sen!2sin"
+                                height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- =======================
+    Map END -->
+
+        </main>
+        <!-- **************** MAIN CONTENT END **************** -->
+
+        <br>
+        <div class="footer-for-empty">
+            <footer
+                style="display: flex; align-items:center; justify-content:space-around; flex-wrap:wrap; background-color: rgb(0, 0, 0); color: white;">
+                <div id="botbot" style="display: flex;">
+                    <li type="none"><a href="https://www.instagram.com/helping_hut/"><img
+                                style="width:30px;  height:30px; margin-top:30px; margin:10px"
+                                src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt=""></a></li>
+                    <li type="none"><a href="https://www.facebook.com/helpinghutngo/"><img
+                                style="width: 30px; height:30px; margin-top: 30px; margin:10px"
+                                src="https://img.icons8.com/color/48/000000/facebook-new.png" alt=""></a></li>
+                    <li type="none"><a href="https://www.youtube.com/c/HelpingHut"><img
+                                style="width: 30px; height:30px; margin-top: 30px; margin:10px"
+                                src="https://img.icons8.com/fluency/48/000000/youtube-play.png" alt=""></a></li>
+                    <li type="none"><a
+                            href="https://www.linkedin.com/search/results/all/?keywords=helping%20hut%20&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bf1312c1-105c-4871-8895-632e95d4592c&sid=7cg"><img
+                                style="width: 30px; height:30px; margin-top: 30px; margin:10px"
+                                src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt=""></a></li>
+                    <li type="none"><a href="https://twitter.com/helping_hut"><img
+                                style="width: 30px; height:30px; margin-top: 30px; margin:10px"
+                                src="https://img.icons8.com/fluency/48/000000/twitter-squared.png" alt=""></a></li>
+                    <li type="none"><a href="https://t.me/helpinghutngo"><img
+                                style="width: 30px; height:30px; margin-top: 30px; margin:10px"
+                                src="https://img.icons8.com/color/48/000000/telegram-app--v1.png" alt=""></a></li>
+                </div>
+                <div class="aboutus">
+                    <div style="padding: 20px;">Email us: helpinghutngo@gmail.com </div>
+                    <div style="padding: 20px;">Contact us: +91-8924879117</div>
+                </div>
+            </footer>
+            <div class="header1">
+                <marquee behavior="" direction="left">
+                    <li>HELPING HUT NGO
+                    </li>
+                </marquee>
+            </div>
+        </div>
+
+        <!-- Back to top -->
+        <div class="back-top"><i class="fas fa-arrow-up position-absolute top-50 start-50 translate-middle"></i></div>
+
+        <!-- Bootstrap JS -->
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Template Functions -->
+        <script src="assets/js/functions.js"></script>
+</body>
+<script src="footer-new.js"></script>
+<script src="script.js"></script>
+
+</html>
