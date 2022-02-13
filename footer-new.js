@@ -1,4 +1,4 @@
-let head = document.getElementsByTagName('head')[0];
+let footerNewhead = document.getElementsByTagName('head')[0];
 
 // jQuery
 // let script = document.createElement('script');
@@ -7,11 +7,22 @@ let head = document.getElementsByTagName('head')[0];
 // head.appendChild(script);
 
 // Fontawesome CSS for Icons
-// faCss = document.createElement('link');
-// faCss.rel = 'stylesheet';
-// faCss.href = 'https://use.fontawesome.com/releases/v5.0.13/css/all.css';
-// faCss.type = 'text/css';
-// head.appendChild(faCss);
+faCss = document.createElement('link');
+faCss.rel = 'stylesheet';
+faCss.href = 'https://use.fontawesome.com/releases/v5.0.13/css/all.css';
+faCss.type = 'text/css';
+
+// check if fontawesome is already present in head
+let faCssExists = false;
+for (let i = 0; i < footerNewhead.children.length; i++) {
+    if (footerNewhead.children[i].href === faCss.href) {
+        faCssExists = true;
+        break;
+    }
+}
+if (!faCssExists) {
+    footerNewhead.appendChild(faCss);
+}
 
 // Bootstrap CSS
 // bootstrapCss = document.createElement('link');
@@ -29,7 +40,7 @@ customCss = document.createElement('link');
 customCss.rel = 'stylesheet';
 customCss.href = 'footer-new.css';
 customCss.type = 'text/css';
-head.appendChild(customCss);
+footerNewhead.appendChild(customCss);
 
 // get the footer page as html
 fetch('./footer-new.html').then(function (response) {
