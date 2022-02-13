@@ -33,11 +33,11 @@
   z-index: 1;
   }
 
-  a {
+  /* a {
     display: flex;
     margin-top: 20px;
     color: inherit;    
-}
+} */
 
   .header , .header1 {
     background-color: rgb(78, 78, 78);
@@ -378,6 +378,7 @@ background-color: rgb(2, 41, 54);
 animation-name: fade;
 animation-duration: 4s;
 } */
+}
 .navbar li {
 text-align: center;
 width: fit-content;
@@ -413,4 +414,19 @@ to {
 .images img{
     margin: 10px;
     border-radius: 10px;
+}
+@media screen {
+  #more {display: none;
+    cursor: pointer;
+  }
+}
+@media screen {
+  #More {display: none;
+    cursor: pointer;
+  }
+}
+@media screen {
+  #More1 {display: none;
+    cursor: pointer;
+  }
 }
