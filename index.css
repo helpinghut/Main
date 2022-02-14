@@ -418,6 +418,21 @@ to {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 640px) {
+  .imgmain .images{
+   display:none;
+   }
+   .imgmain .mobile img{
+    height: 300px;
+    border: 10px solid black;
+  }
+}
+@media screen and (min-width: 640px){
+  .imgmain .mobile{
+    display: none;
+  }
+  
+}
 .images img{
   margin: 10px;
   border-radius: 10px;
@@ -437,3 +452,33 @@ to {
   cursor: pointer;
 }
 }
+
+#slideshow { 
+  margin: 20px; 
+  margin-right: 300px;
+  position: relative; 
+  height: 300px;
+  padding: 10px; 
+}
+
+#slideshow > div { 
+  position: absolute; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+}
+
+#slideshow1 { 
+  margin: 20px; 
+  margin-right: 300px;
+  position: relative; 
+  height: 300px; 
+  padding: 10px; 
+}
+
+#slideshow1 > div { 
+  position: absolute; 
+  left: 10px; 
+  right: 10px; 
+}
+
