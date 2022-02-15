@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="navbar-new.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer-new.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <style>
+    * {
+      font-family: 'Source Sans Pro', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .main-content {
+      background-color: black;
+    }
+
+    #slider {
+      margin: 0 auto;
+      width: 80%;
+      height: 30%;
+      overflow: hidden;
+    }
+
+    .slides {
+      overflow: hidden;
+      animation-name: fade;
+      animation-duration: 1s;
+      display: none;
+    }
+
+    slides img {
+      width: 100%;
+      height: 30%;
+    }
+
+    #dot {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .dot {
+      display: inline-block;
+      border-radius: 20%;
+      background: #d3d3d3;
+      padding: 5px;
+      margin: 10px 3px;
+    }
+
+    .active {
+      background: rgb(90, 89, 89);
+    }
+
+    @media (max-width: 567px) {
+      #slider {
+        width: 100%;
+      }
+    }
+
+    .page-title {
+        margin-bottom: 8rem;
+      padding-top: 15px;
+        font-size: 8rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: -0.4px;
+        line-height: 8rem;
+        color: #3d3a3a;
+        text-align: center;
+        text-decoration: underline;
+      }
+      @media only screen and (max-width: 760px) {
+        .page-title {
+          margin-bottom: 6rem;
+          font-size: 7rem;
+          text-align: center;
+        }
+      }
+      @media only screen and (max-width: 580px) {
+        .page-title {
+          margin-bottom: 4rem;
+          font-size: 6rem;
+          text-align: center;
+        }
+      }
+      @media only screen and (max-width: 370px) {
+        .page-title {
+          margin-bottom: 0;
+          font-size: 4rem;
+          text-align: center;
+        }
+      }
+
+
+  </style>
+  <body>
+    <nav></nav>
+<script src="navbar-new.js"></script>
+
+
+
+    <div class="main-content">
+      <header>
+        <h1 class="page-title">MEDIA COVERAGE</h1>
+      </header>
+      <div id="slider">
+        <div class="slides">
+          <img src="media_coverages/01.png" width="100%" height="30%" />
+        </div>
+        <div class="slides">
+          <img src="media_coverages/02.png" width="100%" />
+        </div>
+        <div class="slides">
+          <img src="media_coverages/03.jpg" width="100%" />
+        </div>
+        <div class="slides">
+            <img src="media_coverages/04.jpg" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/05.jpg" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/06.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/07.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/08.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/09.jpg" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/10.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/11.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/12.jpg" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/13.png" width="100%" />
+          </div>
+          <div class="slides">
+            <img src="media_coverages/14.png" width="100%" />
+          </div>
+        <div id="dot">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+
+    <script>
+      var index = 0;
+      var slides = document.querySelectorAll(".slides");
+      var dot = document.querySelectorAll(".dot");
+
+      function changeSlide() {
+        if (index < 0) {
+          index = slides.length - 1;
+        }
+
+        if (index > slides.length - 1) {
+          index = 0;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          dot[i].classList.remove("active");
+        }
+
+        slides[index].style.display = "block";
+        dot[index].classList.add("active");
+
+        index++;
+
+        setTimeout(changeSlide, 5000);
+      }
+
+      changeSlide();
+    </script>
+
+
+  </body>
+  <footer></footer>
+<script src="footer-new.js"></script>
+<div class="header1">
+  <marquee behavior="" direction="left">
+    <li>HELPING HUT NGO
+    </li>
+  </marquee>
+</div>
+</html>
