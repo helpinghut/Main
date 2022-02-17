@@ -3,7 +3,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
-    color: #323232;
     font-size: 15px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
@@ -11,7 +10,7 @@ body {
     -moz-font-smoothing: antialiased;
 }
 .page-title {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 
     font-size: 8rem;
     font-weight: 100;
@@ -20,7 +19,6 @@ body {
     line-height: 8rem;
     color: black;
     text-align: center;
-    text-decoration: underline;
   }
   @media only screen and (max-width: 760px) {
     .page-title {
@@ -58,10 +56,9 @@ body {
     position: relative;
 }
 
-.team-img img
+.img-responsive
 {
-    border-width: 10px;
-    border-color: #222;
+    border: solid black 15px;
 }
 
 .team-member {

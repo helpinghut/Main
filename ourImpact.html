@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media Coverage</title>
+    <title>Our Impact</title>
 
     <link
       rel="stylesheet"
@@ -55,34 +55,19 @@
     #slider {
       margin: 0 auto;
       height: 40%;
-      width: 55%;
+      width: 33%;
       overflow: hidden;
       padding-top: 80px;
     }
 
-    .slides {
-      overflow: hidden;
-      animation-name: fade;
-      animation-duration: 1s;
-      display: none;
-    }
+
 
     .slides img {
       width: 100%;
       border: solid gray 15px;
     }
 
-    #dot {
-      margin: 0 auto;
-      text-align: center;
-    }
-    .dot {
-      display: inline-block;
-      border-radius: 20%;
-      background: #d3d3d3;
-      padding: 5px;
-      margin: 10px 3px;
-    }
+
 
     .active {
       background: rgb(90, 89, 89);
@@ -139,77 +124,22 @@
 <script src="navbar-new.js"></script>
 
 <header>
-  <h1 class="page-title">MEDIA COVERAGE</h1>
+  <h1 class="page-title">OUR IMPACT</h1>
 </header>
 
     <div class="main-content">
 
       <div id="slider">
-        <div class="slides">
-          <img src="media_coverages/01.png" width="100%" />
-        </div>
-        <div class="slides">
-          <img src="media_coverages/02.png" width="100%" />
-        </div>
-        <div class="slides">
-          <img src="media_coverages/03.jpg" width="100%" />
-        </div>
-        <div class="slides">
-            <img src="media_coverages/04.jpg" width="100%" />
-          </div>
-          <div class="slides">
-            <img src="media_coverages/05.jpg" width="100%" />
-          </div>
-          <div class="slides">
-            <img src="media_coverages/09.jpg" width="100%" />
-          </div>
 
           <div class="slides">
-            <img src="media_coverages/12.jpg" width="100%" />
+            <img src="Map.jpg" width="100%" />
           </div>
 
-        <div id="dot">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
 
-        </div>
       </div>
 
 
-    <script>
-      var index = 0;
-      var slides = document.querySelectorAll(".slides");
-      var dot = document.querySelectorAll(".dot");
 
-      function changeSlide() {
-        if (index < 0) {
-          index = slides.length - 1;
-        }
-
-        if (index > slides.length - 1) {
-          index = 0;
-        }
-
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-          dot[i].classList.remove("active");
-        }
-
-        slides[index].style.display = "block";
-        dot[index].classList.add("active");
-
-        index++;
-
-        setTimeout(changeSlide, 7000);
-      }
-
-      changeSlide();
-    </script>
 
 
   </body>
