@@ -18,7 +18,61 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="index.js"></script>
   <link rel="stylesheet" href="navbar-new.css">
+  <link rel="stylesheet" href="chunk.css">
   <style>
+    .click {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #383d41;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .click:hover {
+      background-color: #000000
+    }
+
+    .click:active {
+      background-color: #3b2f1a;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    .partitioner {
+    min-height: 100px;
+    width: 100%;
+    background: linear-gradient(#000026 50%,#fff 0);
+    display: flex;
+    justify-content: center;
+    z-index: 200;
+}
+.partitioner-card {
+    width: 80%;
+    height: 100%;
+    z-index: 200;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%), inset 0 -2px 6px 0 rgb(10 37 64 / 25%);
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-hovers {
+      width: 118px;
+      margin: -8px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .btn-rk {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
   </style>
 </head>
 
@@ -31,125 +85,196 @@
   </div>
   <div class="row-1">
     <nav class="navbar-1"></nav>
-  <script src="navbar-new.js"></script>
-  <h1
-    style="justify-content: center; text-align: center;padding: 20px; color: aliceblue;background-color: black;">
-    Ensuring Basic Needs through Positive Deeds!</h1>
-  <div class="slideshow-container" style="width:100%;">
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade" style="width:100%;">
-      <div class="numbertext"></div>
-      <img src="slide3.jpg" style="width:100%">
-      <div class="text">BE A RESPONSIBLE CITIZEN <br>
-        If you want nobody to beg on the streets, then support our vision by joining us.</div>
+    <script src="navbar-new.js"></script>
+    <h1 class="fancytext">
+      Ensuring Basic Needs through Positive Deeds!</h1>
+    <div class="slideshow-container" style="width:100%;">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade" style="width:100%;">
+        <div class="numbertext"></div>
+        <img src="slide3.jpg" style="width:100%">
+        <div class="text">BE A RESPONSIBLE CITIZEN <br>
+          If you want nobody to beg on the streets, then support our vision by joining us.</div>
+      </div>
+      <div class="mySlides fade" style="width:100%;">
+        <div class="numbertext"></div>
+        <img src="slide2.jpg" style="width:100%">
+        <div class="text">Ensuring basic needs through good deeds </div>
+      </div>
+      <div class="mySlides fade" style="width:100%;">
+        <div class="numbertext"></div>
+        <img src="slide3.jpg" style="width:100%">
+        <div class="text">BE A RESPONSIBLE CITIZEN <br>
+          If you want nobody to beg on the streets, then support our vision by joining us.</div>
+      </div>
     </div>
-    <div class="mySlides fade" style="width:100%;">
-      <div class="numbertext"></div>
-      <img src="slide2.jpg" style="width:100%">
-      <div class="text">Ensuring basic needs through good deeds </div>
-    </div>
-    <div class="mySlides fade" style="width:100%;">
-      <div class="numbertext"></div>
-      <img src="slide3.jpg" style="width:100%">
-      <div class="text">BE A RESPONSIBLE CITIZEN <br>
-        If you want nobody to beg on the streets, then support our vision by joining us.</div>
-    </div>
-  </div>
-  <br>
-  <div class="btn-rk">
-    <a href="overview.html">
-      <button style="font-weight: bolder;font-size: larger; border-bottom-right-radius: 50px;border-top-right-radius: 50px;" class="btn-hovers color-1">About Us</button></a>
-    <!-- <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
+    <br>
+    <div class="btn-rk">
+      <a href="overview.html">
+        <button style="font-weight: bolder;font-size: larger; border-radius: 50px;" class="btn-hovers color-2"><i
+            class="fas fa-users"></i> &nbsp; About Us</button></a>
+      <!-- <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
       <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-6">Donate</button></a> -->
-  </div>
-  <br><br>
-  <div class="row-5">
-    <h1
-      style="color: black; background-color: rgba(253, 243, 243, 0.5); width: fit-content; text-align: center; margin: auto;padding:20px;margin-bottom: 0% margin; font-size: large;">
-      <span><b>UDAAN STREET SCHOOL</b></span>
-    </h1><br>
-    <div class="card-2">
-      <li type=none>
-        <h2>Every child should have the opportunity to recieve a quality education</h2>
-      </li><br>
-      <li type=none><p>"Education is for improving the lives of others and for leaving your community & world better than
-        you found it." <span id="dots">...</span><span id="more">With this in mind Helping Hut started an initiative a few months back of UDAAN STREET SCHOOL and
-        are already teaching 50+ underprivileged children & hence, making their life much better & fulfilled. You can
-        also start this at your place, providing education to underprivileged children who don't have access to quality
-        education!!</span></p><button onclick="myFunction()" id="myBtn" style="color: blue; background-color: rgba(253, 243, 243, 0.5); border: none;">Read more</button></li>
-        
-        <br>
-      <li type=none>
-        <h3>Therefore, Helping Hut NGO provides free education at ' udaan - Street School ' at
-          <li> Dwarka Sec-13 DDA Park,New Delhi</li>
-          <li> Opp. Vegas Mall, New Delhi</li>
-          <li> Near Dwarka Metro Station, New Delhi</li>
-      </ol>
     </div>
     <br><br>
-  </div>
-  <br>
-  <div>
-    <h3
-      style="justify-content: center; text-align: center;padding: 20px; color: aliceblue;background-color: black;">
-      BEGGAR TRANSFORMATION</h3>
-    <DIV class="content">
-      <p style="display: flex; height: auto;flex-wrap: wrap; padding: 10px; font-size: large;">
-        HELPING HUT helped a beggar from Dwarka ,who begged for years to survive , by providing him with a sewing machine so <span id="dot">...</span><span id="More">
-        that he can live his life with full dignity. Likewise we also provide skills to other beggars to
-        transform their life for a brighter future.</span>
-      </p>
-      <button onclick="myFunction1()" id="myBtn1" style="color: blue; background-color: white; padding: 10px; border: none;font-size: large;">Read more</button>
-
-      <div class="imgmain">
-
-        <div class="images">
-          <img height="300px" width="350px" src="beg1.jpg" alt="">
-          <img height="300px" width="350px" src="beg2.jpg" alt="">
-        </div>
-
-        <div class="mobile" id="slideshow">
-          <div><img height="300px" width="280px" src="beg1.jpg" alt=""></div>
-          <div><img height="300px" width="280px" src="beg2.jpg" alt=""></div>
+    <div class="row-5">
+      <div class="partitioner">
+        <div class="partitioner-card">
+          <div class="py-4 px-3 m-0 row">
+            <!-- <div class="col-md-4"><img src="https://tdpvista.in/static/media/logo_blue.06c0fdc1.png" width="100%" alt="..."></div> -->
+            <div class="col-md-8">
+              <div style="display: flex; justify-content: flex-end; align-items: center; height: 100%;">
+                <div style="font-family: gunplay; font-size: 26px; text-align: center; padding-right: 2%;">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> <b> UDAAN STREET SCHOOL</b> </font>
+                  </font><br>
+                  <!-- <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">and flourishing society</font>
+                  </font> -->
+                </div>
+                <div style="width: 4px; height: 100%; background-color: rgb(0, 0, 41);"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </DIV>
-  </div>
-  <div>
-    <h2 style="justify-content: center; text-align: center;padding: 20px; color: aliceblue;background-color: black;">
-      CHARITY CARNIVAL</h2>
-    <DIV class="content">
-      <p style="display: flex; height: auto;flex-wrap: wrap; padding: 10px; font-size: large;">
-        Helping Hut cordially invites you to join our CHARITY CARNIVAL Sponsored by Silizium-Electronics society of Deen <span id="dot1">...</span><span id="More1">
-        Dayal Upadhyay college University of Delhi with Ensemble_official & delhi university official as our Media Partner & Insightone
-        as Application partner for the Event on December 25, 2021. This carnival is being organised as a way to _add_ fun into the 
-        process of helping people by raising funds through means of games and food stalls in the carnival.</span></p>
-      <button onclick="myFunction2()" id="myBtn2" style="color: blue; background-color: white; padding: 10px; border: none; font-size: large;">Read more</button>
+      <!-- <h1
+        style="color: black; background-color: rgba(253, 243, 243, 0.5); width: fit-content; text-align: center; margin: auto;padding:20px;margin-bottom: 0% margin; font-size: large;">
+        <span><b>UDAAN STREET SCHOOL</b></span>
+      </h1> -->
+      <div class="card-2">
+        <li type=none>
+          <h2>Every child should have the opportunity to recieve a quality education</h2>
+        </li><br>
+        <li type=none>
+          <p style="font-size: 20px;">"Education is for improving the lives of others and for leaving your community & world better than
+            you found it." <span style="font-size: 20px;" id="dots">...</span><span style="font-size: 20px;" id="more">With this in mind Helping Hut started an initiative
+              a few months back of UDAAN STREET SCHOOL and
+              are already teaching 50+ underprivileged children & hence, making their life much better & fulfilled. You
+              can
+              also start this at your place, providing education to underprivileged children who don't have access to
+              quality
+              education!!</span></p><button onclick="myFunction()" class="click" id="myBtn">Read more</button>
+        </li>
 
-    <div class="imgmain">
-
-        <div class="images">
-          <img height="300px" width="350px" src="char1.jpg" alt="">
-          <img height="300px" width="350px" src="char2.jpg" alt="">
-          <img height="300px" width="350px" src="char3.jpg" alt="">
-          <img height="300px" width="350px" src="char4.jpg" alt="">
-        </div>
-
-        <div class="mobile" id="slideshow1">
-          <div><img height="300px" width="280px" src="char1.jpg" alt=""></div>
-          <div><img height="300px" width="280px" src="char2.jpg" alt=""></div>
-          <div><img height="300px" width="280px" src="char3.jpg" alt=""></div>
-          <div><img height="300px" width="280px" src="char4.jpg" alt=""></div>
-        </div>
-
+        <br>
+        <li type=none>
+          <h3>Therefore, Helping Hut NGO provides free education at ' udaan - Street School ' at
+        <li> Dwarka Sec-13 DDA Park,New Delhi</li>
+        <li> Opp. Vegas Mall, New Delhi</li>
+        <li> Near Dwarka Metro Station, New Delhi</li>
+        </ol>
       </div>
-    </DIV>
-  </div>
+      <br><br>
+    </div>
+    <br>
+    <div>
+      <div class="partitioner">
+        <div class="partitioner-card">
+          <div class="py-4 px-3 m-0 row">
+            <!-- <div class="col-md-4"><img src="https://tdpvista.in/static/media/logo_blue.06c0fdc1.png" width="100%" alt="..."></div> -->
+            <div class="col-md-8">
+              <div style="display: flex; justify-content: flex-end; align-items: center; height: 100%;">
+                <div style="font-family: gunplay; font-size: 26px; text-align: center; padding-right: 2%;">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> <b> BEGGAR TRANSFORMATION</b> </font>
+                  </font><br>
+                  <!-- <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">and flourishing society</font>
+                  </font> -->
+                </div>
+                <div style="width: 4px; height: 100%; background-color: rgb(0, 0, 41);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <h3 style="justify-content: center; text-align: center;padding: 20px; color: aliceblue;background-color: black;">
+        BEGGAR TRANSFORMATION</h3> -->
+      <div class="card-2">
+      <DIV class="content">
+        <p style="display: flex; height: auto;flex-wrap: wrap; padding: 10px; font-size: 20px;">
+          HELPING HUT helped a beggar from Dwarka ,who begged for years to survive , by providing him with a sewing
+          machine so <span style="font-size: 20px;" id="dot">...</span><span style="font-size: 20px;" id="More">
+            that he can live his life with full dignity. Likewise we also provide skills to other beggars to
+            transform their life for a brighter future.</span>
+        </p>
+        <button onclick="myFunction1()" class="click" id="myBtn1">Read more</button>
+
+        <div class="imgmain">
+
+          <div class="images">
+            <img height="300px" width="350px" src="beg1.jpg" alt="">
+            <img height="300px" width="350px" src="beg2.jpg" alt="">
+          </div>
+
+          <div class="mobile" id="slideshow">
+            <div><img height="300px" width="280px" src="beg1.jpg" alt=""></div>
+            <div><img height="300px" width="280px" src="beg2.jpg" alt=""></div>
+          </div>
+        </div>
+      </DIV>
+    </div>
+    <div>
+      <div class="partitioner">
+        <div class="partitioner-card">
+          <div class="py-4 px-3 m-0 row">
+            <!-- <div class="col-md-4"><img src="https://tdpvista.in/static/media/logo_blue.06c0fdc1.png" width="100%" alt="..."></div> -->
+            <div class="col-md-8">
+              <div style="display: flex; justify-content: flex-end; align-items: center; height: 100%;">
+                <div style="font-family: gunplay; font-size: 26px; text-align: center; padding-right: 2%;">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> <b> CHARITY CARNIVAL</b> </font>
+                  </font><br>
+                  <!-- <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">and flourishing society</font>
+                  </font> -->
+                </div>
+                <div style="width: 4px; height: 100%; background-color: rgb(0, 0, 41);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <h2 style="justify-content: center; text-align: center;padding: 20px; color: aliceblue;background-color: black;">
+        CHARITY CARNIVAL</h2> -->
+    <div class="card-2">
+        <p style="display: flex; height: auto;flex-wrap: wrap; padding: 10px; font-size: 20px;">
+          Helping Hut cordially invites you to join our CHARITY CARNIVAL Sponsored by Silizium-Electronics society of
+          Deen <span style="font-size: 20px;" id="dot1">...</span><span style="font-size: 20px;" id="More1">
+            Dayal Upadhyay college University of Delhi with Ensemble_official & delhi university official as our Media
+            Partner & Insightone
+            as Application partner for the Event on December 25, 2021. This carnival is being organised as a way to
+            _add_ fun into the
+            process of helping people by raising funds through means of games and food stalls in the carnival.</span>
+        </p>
+        <button onclick="myFunction2()" class="click" id="myBtn2">Read
+          more</button>
+    </div>
+
+        <div class="imgmain">
+
+          <div class="images">
+            <img height="300px" width="350px" src="char1.jpg" alt="">
+            <img height="300px" width="350px" src="char2.jpg" alt="">
+            <img height="300px" width="350px" src="char3.jpg" alt="">
+            <img height="300px" width="350px" src="char4.jpg" alt="">
+          </div>
+
+          <div class="mobile" id="slideshow1">
+            <div><img height="300px" width="280px" src="char1.jpg" alt=""></div>
+            <div><img height="300px" width="280px" src="char2.jpg" alt=""></div>
+            <div><img height="300px" width="280px" src="char3.jpg" alt=""></div>
+            <div><img height="300px" width="280px" src="char4.jpg" alt=""></div>
+          </div>
+
+        </div>
+    
 
 
 
-  
-  <!--   <div><br><br><br>
+
+    <!--   <div><br><br><br>
     <h1
       style="text-align: center;padding: 10px;background-color: rgb(68, 68, 71);color:white; padding-top: 25px;padding-bottom: 25px; font-size:40px;">
       Our Works</h1>
@@ -172,18 +297,19 @@
       <div class="tree"><b>Food packet distribution</b></div> <br><br><br><br><br>
     </li>
   </div><br><br> -->
-  <br>
-  <footer></footer>
-  <div class="header1">
-    <marquee behavior="" direction="left">
-      <li>HELPING HUT NGO
-      </li>
-    </marquee>
-  </div>
+    <br>
+    <footer></footer>
+    <div class="header1">
+      <marquee behavior="" direction="left">
+        <li>HELPING HUT NGO
+        </li>
+      </marquee>
+    </div>
 </body>
 <script src="footer-new.js"></script>
 <script src="script.js"></script>
 <script src="CELEBRATIONS.js"></script>
 <!-- <script src="navbar.js"></script> -->
 <script src="main.js"></script>
+
 </html>
