@@ -58,24 +58,61 @@
                             </div>
                         </div>
                         <div class="form-row">
+                            <div class="name">13-digit ISBN of the book</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input type="text" class="input--style-6" name="isbn"
+                                        placeholder="e.g. 9780143130727" id="isbn" required>
+                                    <div id="isbn_check"></div>
+                                </div>
+                                <script>
+                                    let isbn = document.getElementById('isbn');
+                                    isbn.addEventListener('keyup', function (e) {
+                                        // check if 13 digit isbn is valid
+                                        if (isbn.value.length == 13) {
+                                            let xhr = new XMLHttpRequest();
+                                            xhr.open('GET', 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn.value, true);
+                                            xhr.onload = function () {
+                                                if (this.status == 200) {
+                                                    let response = JSON.parse(this.responseText);
+                                                    if (response.totalItems == 0) {
+                                                        document.getElementById('isbn_check').innerHTML = '<span class="text-danger">Invalid ISBN or book not found, kindly enter the correct details manually</span>';
+                                                    } else {
+                                                        document.getElementById('isbn_check').innerHTML = '<span class="text-success">Valid ISBN</span>';
+                                                    }
+                                                }
+                                            }
+                                            xhr.send();
+                                        } else {
+                                            document.getElementById('isbn_check').innerHTML = '<span class="text-danger">Invalid ISBN</span>';
+                                        }
+                                        if (e.target.value.length == 13) {
+                                            let isbn = e.target.value;
+                                            let url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn;
+                                            fetch(url)
+                                                .then(res => res.json())
+                                                .then(data => {
+                                                    let book_name = data.items[0].volumeInfo.title;
+                                                    let author_name = data.items[0].volumeInfo.authors;
+                                                    document.getElementById('book_name').value = book_name;
+                                                    document.getElementById('author_name').value = author_name;
+                                                })
+                                                .catch(err => console.log(err));
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="form-row">
                             <div class="name">Book name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="book_name" required>
+                                <input class="input--style-6" type="text" name="book_name" id="book_name" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Author name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="author_name">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">13-digit ISBN Number</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input type="number" class="input--style-6" name="isbn"
-                                        placeholder="like this 9780143130727" required>
-                                </div>
+                                <input class="input--style-6" type="text" name="author_name" id="author_name">
                             </div>
                         </div>
                         <div class="form-row">
@@ -87,16 +124,25 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="form-row">
-                            <div class="name">Upload picture</div>
+                        <div class="form-row">
+                            <div class="name">Upload pictures of the book</div>
                             <div class="value">
-                                <div class="input-group">
-                                    <input class="input-file label--file" type="file" name="file_images[]" id="file" multiple>
-                                   
+                                <div class="input-group">                                    
+                                    <div>
+                                        <label class="label--file" for="front_image">Front Cover</label>
+                                        <input class="input-file label--file" type="file" accept="image/*" name="front_image" id="front_image" required>
+                                    </div><br>
+                                    <div>
+                                        <label class="label--file" for="back_image">Back Cover</label>
+                                        <input class="input-file label--file" type="file" accept="image/*" name="back_image" id="back_image" required>
+                                    </div><br>
+                                    <div>
+                                        <label class="label--file" for="random_image">Any Random Page</label>
+                                        <input class="input-file label--file" type="file" accept="image/*" name="random_image" id="random_image" required>
+                                    </div><br>
                                 </div>
-                                <div class="label--desc">Upload the pictures of the book to be donated, perferably the front side, back side, first page and any random page. Max file size 5 MB</div>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="card-footer">
                             <button class="btn btn--radius-2 btn--blue-2" type="submit" name="submit">Send
                                 Application</button>
