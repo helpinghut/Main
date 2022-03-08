@@ -62,7 +62,7 @@ if(isset($_POST['submit'])) {
 
     //show confirmation alert
     if($result) {
-        echo "<script>alert('Book Donation Successful!');</scrip>";
+        echo "<script>alert('Book Donation Successful!');</script>";
         echo "<script>window.location.href='/book_donations.html';</script>";
     } else {
         echo "<script>alert('Book Donation Failed!');</script>";
