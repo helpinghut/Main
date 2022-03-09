@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.13/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="navbar-new.css">
+    <script src="https://kit.fontawesome.com/f65934061a.js" crossorigin="anonymous"></script>
+    <title>Navbar New</title>
+</head>
+
+<body>
+    <nav class="navbar-1">
+        <span class="my-navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="index.html" class="logo"><img src="../logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
+        <div class="btn-rk">
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">
+                <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-1"><i class="fas fa-hands-helping"></i>Join
+                    us</button> &nbsp; </a>
+            <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
+                <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-6"><i class="fas fa-donate"></i>  Donate</button></a>
+        </div>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="../index.html" class="nav-links">Home</a>
+            </li>
+            <li class="my-dropdown" id="about-us-toggle">
+                <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
+                <div class="my-dropdown-content" id="about-us-menu">
+                    <a href="../overview.html">Overview</a>
+                    <a href="../ourMotive.html">Our Motive</a>
+                    <a href="../governingBody.html">Governing Body</a>
+                    <a href="../teamRepresentative.html">Team Representatives</a>
+                    <a href="../ourImpact.html">Our Impact</a>
+                    <!-- <a href="ourReach.html">Our Reach</a>
+                    <a href="drives.html">Our Impact</a> -->
+
+                    <a href="../mediaCoverage.html">Media Coverage</a>
+                </div>
+            </li>
+            <li class="my-dropdown" id="our-works-toggle">
+                <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
+                <div class="my-dropdown-content" id="our-works-menu">
+                    <a href="../Campaign.html">Campaigns</a>
+                    <a href="../CELEBRATIONS.html">Celebrations</a>
+                    <a href="../drives.html">Drives</a>
+                </div>
+            </li>
+            <li>
+                <a href="../book_donations.html" class="nav-links">Book Donations</a>
+            </li>
+            <li>
+                <a href="../contact.html" class="nav-links">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <script id="navbar-new-toggle-script">
+        // accordian for main nav
+        let mainNav = document.getElementById("js-menu");
+        let navBarToggle = document.getElementById("js-navbar-toggle");
+
+        navBarToggle.addEventListener("click", function () {
+            mainNav.classList.toggle("my-nav-active");
+        });
+        //  accordian for about us item
+        let aboutUsMenu = document.getElementById("about-us-menu");
+        let aboutUsToggle = document.getElementById("about-us-toggle");
+
+        aboutUsToggle.addEventListener("click", function () {
+            aboutUsMenu.classList.toggle("my-nav-active");
+        });
+
+        // accordian for our works item
+        let ourWorksMenu = document.getElementById("our-works-menu");
+        let ourWorksToggle = document.getElementById("our-works-toggle");
+
+        ourWorksToggle.addEventListener("click", function () {
+            ourWorksMenu.classList.toggle("my-nav-active");
+        });
+    </script>
+</body>
+
+</html>
