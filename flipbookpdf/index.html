@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Flipbook</title>
+  <meta name="description" content="Flipbook  ">
+  <meta name="robots" content="noindex, nofollow">
+  <!--  <meta name="viewport" content="width = 1050, user-scalable = no" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image"
+    content="web/files/flipbooks/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202_pdf/1-thumb.jpg">
+  <link href='//fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,700|Ubuntu:400,700|Great+Vibes'
+    rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="web/site/flipbook/extras/jquery.min.1.7.js"></script>
+  <script type="text/javascript" src="web/site/flipbook/extras/jquery-ui-1.8.20.full.min.js"></script>
+  <script type="text/javascript" src="web/site/flipbook/extras/modernizr.2.5.3.min.js"></script>
+  <script type="text/javascript" src="web/site/flipbook/lib/hash.js"></script>
+  <script type="text/javascript">
+    var flipbookcfg = {
+      url: "web\/files\/flipbooks\/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf\/",
+      cover: 0,
+      numPages: 33,
+      textTip: "Press ESC to exit. Use the keyboard arrows to change the page.",
+      background: "\/web\/site\/flipbook\/files\/backgrounds\/back5.svg",
+      showSlider: "null",
+      showSocial: "null",
+      showformat: "1",
+      companyLogo: "https:\/\/www.helpinghutngo.in\/web\/site\/img\/logonet.jpg",
+      title: "",
+      tagtitle: "Flipbook",
+      description: "",
+      showDownload: "null",
+      backlink: "https:\/\/www.helpinghutngo.in",
+      opacity: "0.4",
+      name: "1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf",
+      direction: "ltr",
+      flipsound: "\/web\/site\/flipbook\/files\/page-flip-01a.wav",
+      widthimg: "2644",
+      heightimg: "4219"
+    };
+  </script>
+  <style>
+    .logo-backs {
+      opacity: 0.4;
+    }
+
+    .form-element1 input[type=text],
+    .form-element1 select,
+    .form-element1 textarea {
+      border: 1px solid gray;
+      padding: 5px;
+      min-width: 74px;
+      resize: vertical;
+    }
+
+    .form-element1 {
+      margin-top: 10px;
+      margin-bottom: 12px;
+      margin-left: 65px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      .flipbook-title {
+        display: none !important;
+      }
+
+      .zoom-icon {
+        display: none;
+      }
+
+      .controls-pdf {
+        right: 20px !important;
+      }
+    }
+
+    #ads {
+      z-index: 100;
+      position: fixed;
+      bottom: 14px;
+      text-align: center;
+      padding: 2px;
+      width: 100%;
+    }
+  </style>
+  <script id="Cookiebot" src="uc.js" data-cbid="5261d235-39be-49cc-9546-c44067be9bee" data-blockingmode="auto"
+    type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="logo-backs"></div>
+  <audio id="audio" src="web/site/flipbook/files/page-flip-01a.wav"></audio>
+  <a href="index.html">
+    <img src="web/site/img/logonet.jpg"
+      style="position: absolute;bottom:15px;left: 15px;z-index: 100;height: auto; width: auto; max-width: 16%; max-height: 19%;"></a>
+  
+      <div class="flipbook-title" style="display: none;">
+    <h1></h1>
+    <h2></h2>
+    <p></p>
+  </div>
+  <div id="canvas">
+    <!--<div class="close-icon">
+            <img src="/web/site/flipbook/pics/close.png" style="cursor: pointer;" />
+        </div>
+        -->
+    <div class="controls-pdf">
+      <div class="controlzoom" style="display:none">
+        <a href="#" id="zoomin" style="font-size:16px; color:#808080; text-decoration: none; font-weight:bold"><img
+            src="web/site/flipbook/pics/zoomin.png" /></a>
+        <a href="#" id="zoomout" style="font-size:16px; color:#808080; text-decoration: none; font-weight:bold"><img
+            src="web/site/flipbook/pics/zoomout.png" /></a>
+      </div>
+      <a href="web/files/uploads/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf" target="_blank"><img
+          class="down-pdf" src="web/site/flipbook/pics/down-pdf.png" /></a>
+      <div class="zoom-icon zoom-icon-in"></div>
+      <input type="image" class="fs" src="web/site/flipbook/pics/fs.png" onclick="openFullscreen();" />
+      <a href="#" id="prev"></a>
+      <a href="#" id="next"></a>
+    </div>
+    <div class="magazine-viewport" id="flipfull">
+      <div class="container">
+        <div class="magazine">
+          <div ignore="1" class="next-button"></div>
+          <div ignore="1" class="previous-button"></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div id="slider-bar" class="turnjs-slider">
+          <div id="slider"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ranjit">
+    <h2>Made by <br> <a style="text-decoration: none;" href="https://www.linkedin.com/in/ranjit-gohite-573064199/"> Ranjit</a></h2>
+  </div>
+  <script type="text/javascript" src="web/site/flipbook/js/core.js"></script>
+  <script type="text/javascript">
+    yepnope({
+      test: Modernizr.csstransforms,
+      yep: ['web/site/flipbook/lib/turn.min.js'],
+      nope: ['web/site/flipbook/lib/turn_html4.min.js', 'web/site/flipbook/css/jquery.ui_html4.css'],
+      both: ['web/site/flipbook/lib/zoom.min.js', 'web/site/flipbook/css/jquery.ui.css', 'web/site/flipbook/js/magazinenolink.js', 'web/site/flipbook/css/magazine.css'],
+      complete: loadApp
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script type="text/javascript" src="js/300/addthis_widget.js" defer></script>
+  <script>
+    var elem = document.getElementById("flipfull");
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      } else if (elem.webkitEnterFullscreen) {
+        elem.webkitEnterFullscreen(); //for iphone this code worked
+      }
+    }
+  </script>
+</body>
+
+</html>

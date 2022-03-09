@@ -1,0 +1,531 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Flipbook</title>
+     <meta name="description" content="Flipbook  ">
+     <meta name="robots" content="noindex, nofollow">
+  <!--  <meta name="viewport" content="width = 1050, user-scalable = no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://www.flipbookpdf.net/web/files/flipbooks/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf/1-thumb.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,700|Ubuntu:400,700|Great+Vibes' rel='stylesheet' type='text/css'>
+
+
+    <script type="text/javascript" src="/web/site/flipbook/extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="/web/site/flipbook/extras/jquery-ui-1.8.20.full.min.js"></script>
+    <script type="text/javascript" src="/web/site/flipbook/extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="/web/site/flipbook/lib/hash.js"></script>
+        <script type="text/javascript">
+        var flipbookcfg={
+            url: "..\/files\/flipbooks\/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf\/",
+            cover: 0,
+            numPages: 33,
+            textTip: "Press ESC to exit. Use the keyboard arrows to change the page.",
+            background: "\/web\/site\/flipbook\/files\/backgrounds\/back5.svg",
+            showSlider: "null",
+            showSocial: "null",
+            showformat: "1",
+            companyLogo: "https:\/\/www.flipbookpdf.net\/web\/site\/img\/logonet.png",
+            title: "",
+            tagtitle: "Flipbook", 
+           description: "", 
+            showDownload: "null",
+            backlink: "https:\/\/www.flipbookpdf.net",
+            opacity: "0.4",
+            name: "1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf",
+            direction: "ltr", 
+            flipsound: "null", 
+            widthimg: "2644",
+            heightimg: "4219" 
+            
+        };
+    </script>
+    <style>
+    .logo-backs {
+    opacity: 0.4;
+}
+.form-element1 input[type=text], .form-element1 select, .form-element1 textarea {
+border: 1px solid gray;
+padding: 5px;
+min-width: 74px;
+resize: vertical;
+}
+
+.form-element1 {
+margin-top: 10px;
+margin-bottom: 12px;
+margin-left: 65px;
+}
+
+@media only screen and (max-width: 750px) {
+.flipbook-title {
+    display:none!important;
+  }
+.zoom-icon {
+    display:none;
+  }
+
+.controls-pdf {
+    right: 20px!important;
+}  
+    
+  
+}
+
+
+#ads {
+z-index:100; 
+position: fixed; 
+bottom:14px; 
+text-align: center; 
+padding: 2px; 
+width: 100%;
+}
+
+
+
+
+
+
+
+</style>
+
+    
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="5261d235-39be-49cc-9546-c44067be9bee" data-blockingmode="auto" type="text/javascript"></script>   
+
+</head>
+<body>
+ 
+
+
+<div class="logo-backs"></div>
+
+<audio id="audio" src="/web/site/flipbook/pics/page-flip.mp3"></audio>
+
+
+<a href="https://www.flipbookpdf.net">
+<img src="https://www.flipbookpdf.net/web/site/img/logonet.png" style="position: absolute;bottom:15px;left: 15px;z-index: 100;height: auto; width: auto; max-width: 16%; max-height: 19%;"></a>
+
+
+    <div class="flipbook-title" style="display: none;">
+        <h1></h1>
+        <h2></h2>
+        <p></p>
+    </div>
+    
+
+
+
+    
+
+        
+
+<script type="text/javascript">
+    jQuery(function() {
+
+        $('.modal-config [name=title]').val(flipbookcfg.title);
+        $('.modal-config [name=tagtitle]').val(flipbookcfg.tagtitle);
+        $('.modal-config [name=description]').val(flipbookcfg.description);
+        $('.modal-config [name=company_logo]').val(flipbookcfg.companyLogo);
+        $('.modal-config [name=show_slider]').val(flipbookcfg.showSlider);
+        $('.modal-config [name=show_social]').val(flipbookcfg.showSocial);
+        $('.modal-config [name=flipsound]').val(flipbookcfg.flipsound);
+        $('.modal-config [name=show_format]').val(flipbookcfg.showformat);
+        $('.modal-config [name=back_link]').val(flipbookcfg.backlink);
+        $('.modal-config [name=opacity]').val(flipbookcfg.opacity);
+        $('.modal-config [name=show_download]').val(flipbookcfg.showDownload);
+        $('.modal-config [name=direction]').val(flipbookcfg.direction);        
+
+        $('.modal-config [name=title]').on('change', function() {
+            flipbookcfg.title=$(this).val().replace("<script","").replace("<a","").replace("<img","").replace("&lt","");
+            applyConfig();
+        });
+
+        $('.modal-config [name=tagtitle]').on('change', function() {
+            flipbookcfg.tagtitle=$(this).val().replace("<script","").replace("<a","").replace("<img","").replace("&lt","");
+            applyConfig();
+        });
+
+        $('.modal-config [name=description]').on('change', function() {
+            flipbookcfg.description=$(this).val().replace("<script","").replace("<a","").replace("<img","").replace("&lt","");
+            applyConfig();
+        });
+
+        $('.modal-config [name=company_logo]').on('blur', function() {
+            flipbookcfg.companyLogo=$(this).val().replace("<script","").replace("<a","").replace("<img","").replace("&lt","");
+            applyConfig();
+        });
+
+        $('.modal-config [name=back_link]').on('change', function() {
+            if ($(this).val() == '') {
+            $(this).val('#');
+             }
+            flipbookcfg.backlink=$(this).val().replace("<script","").replace("<a","").replace("<img","").replace("&lt","");
+            applyConfig();
+        });   
+             
+        $('.modal-config [name=opacity]').on('change', function() {
+            flipbookcfg.opacity=$(this).val();
+            $(".logo-backs").css("opacity", $(this).val());
+            $(".span_opacity").html($(this).val());
+            applyConfig();
+        });  
+
+        $('.modal-config [name=show_slider]').on('change', function() {
+            flipbookcfg.showSlider=$(this).val();
+            applyConfig();
+
+        });
+
+        $('.modal-config [name=show_social]').on('change', function() {
+            flipbookcfg.showSocial=$(this).val();
+            applyConfig();
+
+        });        
+        
+        $('.modal-config [name=show_format]').on('change', function() {
+            flipbookcfg.showformat=$(this).val();
+            applyConfig();
+            $('.btnSaveChangesReload').click();
+        });
+
+        $('.modal-config [name=show_download]').on('change', function() {
+            flipbookcfg.showDownload=$(this).val();
+            applyConfig();
+        });
+        
+        $('.modal-config [name=flipsound]').on('change', function() {
+            flipbookcfg.flipsound=$(this).val();
+            applyConfig();
+            $('.btnSaveChangesReload').click();
+        });
+        
+         $('.modal-config [name=direction]').on('change', function() {
+            flipbookcfg.direction=$(this).val();
+            applyConfig();
+            $('.btnSaveChangesReload').click();
+        });
+
+        $('.modal-config .select-background img').on('click', function() {
+            $('.modal-config .select-background img').removeClass('active');
+            $(this).addClass('active');
+            $('.modal-config [name=background]').val($(this).attr('src'));
+            flipbookcfg.background=$(this).attr('src');
+            applyConfig();
+        });
+
+        $('.btnDownload').on('click', function() {
+        
+         $.post('/web/site/index.php?r=site/saveconfig', flipbookcfg, function() {
+                //alert('Saved successfully');   
+            });
+        
+            window.open("/web/site/index.php?r=download/start&id="+flipbookcfg.name, "target=_blank");
+            return false;
+        });
+
+        $('.btnSaveChanges').on('click', function() {
+            $.post('/web/site/index.php?r=site/saveconfig', flipbookcfg, function() {
+                alert('Saved successfully');
+                
+            });
+        });
+        
+        
+                $('.btnSaveChangesSilent').on('click', function() {
+            $.post('/web/site/index.php?r=site/saveconfig', flipbookcfg, function() {
+                //alert('Saved successfully');
+                
+            });
+        });
+        
+                        $('.btnSaveChangesReload').on('click', function() {
+            $.post('/web/site/index.php?r=site/saveconfig', flipbookcfg, function() {
+            location.reload();
+                //alert('Saved successfully');
+                
+            });
+        });
+        
+     
+        
+    });
+    
+   
+</script>
+
+
+<div class="modal-config" style="display: none;">
+    <div class="modal-head">
+        Admin configuration | Free Version: no customizations and max 15 pages download 
+        <span class="modal-close" onclick="$('.modal-config').fadeOut();">X</span>
+    </div>
+    <div class="modal-body">
+        <div class="form-element">
+            <label>Tag Page Title:</label>
+            <input type="text" value="" name="tagtitle" maxlength="128" autocomplete="off"/>
+        </div>
+        <div class="form-element">
+            <label>Flipbook Title <a href="#" data-toggle="tooltip" title="You can use HTML formatting tags like font style tags, bold, new line tags etc."><img src="/web/site/img/info.png"></a>:</label>
+            <input type="text" value="" name="title" maxlength="128" autocomplete="off"/>
+        </div>
+        <div class="form-element">
+            <label>Flipbook Description <a href="#" data-toggle="tooltip" title="You can use HTML formatting tags"><img src="/web/site/img/info.png"></a>:</label>
+            <textarea name="description" maxlength="2048"></textarea>
+           
+        </div>
+        <div class="form-element">
+         
+        
+            <label>Company logo <a href="/access.php" target="_blank">(PRO)</a>:</label>
+<input type="text" name="company_logo" id="company_logo" value="https://www.flipbookpdf.net/web/site/img/logonet.png" disabled />
+
+         </div> 
+        
+ 
+        <div class="form-element">
+            <label>Backlink <a href="/access.php" target="_blank">(PRO)</a>:</label>
+<input type="text" name="back_link" value="https://www.flipbookpdf.net" disabled />
+
+        </div>         
+        <div class="form-element1">
+            <label>Page Slider:</label>
+            <select name="show_slider">
+                <option value="1">Show</option>
+                <option value="0">Hide</option>
+            </select>
+             <label>Social Icons:</label>
+            <select name="show_social">
+                <option value="1">Show</option>
+                <option value="0">Hide</option>
+            </select>
+            <label>Flip Sound:</label>
+            <select name="flipsound">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+        </div>
+        <div class="form-element1">
+            <label>Flip Direction:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select name="direction">
+                <option value="ltr">LTR</option>
+                <option value="rtl">RTL</option>
+            </select>
+            
+            
+            <label>PDF Download Button:</label>
+            <select name="show_download">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+                <div class="form-element">
+            <label>Format:</label>
+            <select name="show_format">
+                <option value="1">A4/A5 (8.3"x11.7" | Portrait)</option>
+                <option value="3">US Letter (8.5"x11" | Portrait)</option>
+                <option value="0">A5 (8.3"x5.8" | Landscape)</option>
+                <option value="4">Wide (16:9 | Landscape)</option>  
+                <option value="2">Square (8"x8")</option>    
+                <option value="11">Auto size detect</option>  
+                <option value="5">Single Page Flip - A4/A5 Portait</option>
+                <option value="6">Single Page Flip - USLetter Portait</option>
+                <option value="7">Single Page Flip - A5 Landscape</option>
+                <option value="8">Single Page Flip - Wide Landscape</option>
+                <option value="9">Single Page Flip - Square</option>
+                <option value="10">Single Page Flip - Auto size detect</option>
+            </select>
+        </div>
+        
+                <div class="form-element">
+        <div style="float:right;margin-right:30px;">
+  <input type="range" id="range" name="opacity" step="0.1" min="0.1" max="1" value=0.4>
+  <span class="span_opacity"></span>
+</div>
+        
+            <label>Select Background and Opacity level:</label>
+            <input type="hidden" name="background" value="" />
+            <div class="select-background">
+                                    <img src="/web/site/flipbook/files/backgrounds/presentation3.jpg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back9.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back13.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/black_wall.jpg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/presentation2.jpg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back16.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/presentation1.png" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back4.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back2.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back15.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back11.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back1.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back10.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back3.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back6.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back14.svg" width="20px" class=""  />
+                                    <img src="/web/site/flipbook/files/backgrounds/back5.svg" width="20px" class=""  />
+                                
+                               
+            </div>
+        </div>
+                 <div class="form-element" style="text-align: center;">
+            <button type="button" class="btnSaveChanges">Save changes</button>
+        </div>
+         <div class="form-element" style="display:none;">
+            <button type="button" class="btnSaveChangesSilent">Save changes</button>
+        </div>
+         <div class="form-element" style="display:none;">
+            <button type="button" class="btnSaveChangesReload">Save changes</button>
+        </div>
+        <div class="form-element" style="text-align: center;">
+                   <input type="button" onclick="window.open('https://www.flipbookpdf.net/web/site/imageareaselect/index.php?flipbookid=1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf&page=1&format=1')" value="Add Link Area" style="padding: 7px 10px;" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+             
+             
+           
+                  <button class="tocart" onclick="window.open('https://store.payproglobal.com/checkout?products[1][id]=54889', '_blank'); return false;">Upgrade to Download</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+            <input type="button" onclick="window.open('https://www.flipbookpdf.net/web/site/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf.html')" value="View your Flipbook" style="padding: 7px 10px;" />
+            
+                       
+        </div>
+        
+        
+        
+       
+<div style="text-align: right;">
+<button onclick="shortlink()" style="height:20px;padding:0px;"> Short Link </button>&nbsp;&nbsp;<button onclick="embedded()" style="height:20px;padding:0px;">Embedded Code</button>&nbsp;
+</div>
+
+
+    </div>
+</div>
+<script>
+function shortlink() {
+ var myWindow = window.open("https://tinyurl.com/create.php?url=https://www.flipbookpdf.net/web/site/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf.html", "MsgWindow", "width=900,height=650");
+}
+
+function embedded() {
+ var myWindow = window.open("", "MsgWindow", "width=620,height=300");
+  myWindow.document.write("<h3 style=\"font-family:Arial;\">Copy and Paste the following code in your Website HTML Editor</h3><p style=\"font-family:Arial;\">You have to change only the <b>width</b> and the <b>height</b> of the image/iframe to fit your website layout</p><h4 style=\"font-family:Arial;\">Option #1: Image with link to the Flipbook</h4><p style=\"font-family:Arial;\">Your code is:</p><textarea disabled=\"true\" rows=\"5\" style=\"border: none;background-color:white; width:100%\"><a href=\"https://www.flipbookpdf.net/web/site/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf.html\"><img src=\"https://www.flipbookpdf.net/web/files/flipbooks/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf/1.jpg\" width=\"300px\"></a></textarea><h4 style=\"font-family:Arial;\">Option #2: Iframe with flipbook</h4><p style=\"font-family:Arial;\">Your code is:</p><textarea disabled=\"true\" rows=\"6\" style=\"border: none;background-color:white; width:100%\"><iframe src=\"https://www.flipbookpdf.net/web/site/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf.html\" width=\"900\" height=\"637\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></textarea>");
+}
+</script>
+
+    <div id="canvas">
+
+        <!--<div class="close-icon">
+            <img src="/web/site/flipbook/pics/close.png" style="cursor: pointer;" />
+        </div>
+        -->
+
+        
+        <div class="controls-pdf">
+        <div class="controlzoom" style="display:none">
+        <a href="#" id="zoomin" style="font-size:16px; color:#808080; text-decoration: none; font-weight:bold"><img src="/web/site/flipbook/pics/zoomin.png" /></a>
+         <a href="#" id="zoomout" style="font-size:16px; color:#808080; text-decoration: none; font-weight:bold"><img src="/web/site/flipbook/pics/zoomout.png" /></a>
+
+</div>
+        
+                            <a id="config" href="#" onclick="$('.modal-config').fadeIn();"><img class="config" src="/web/site/flipbook/pics/config.png" /></a>
+                        
+             
+            <a href="../files/uploads/1db1d91e253a9a06e95ee70b0d97a472404b35fa202202.pdf" target="_blank" ><img class="down-pdf" src="/web/site/flipbook/pics/down-pdf.png" /></a>
+            <div class="zoom-icon zoom-icon-in"></div>
+            <input type="image" class="fs" src="/web/site/flipbook/pics/fs.png" onclick="openFullscreen();"/>
+             <a href="#" id="prev"></a>
+            <a href="#" id="next"></a>
+        </div>
+
+        <div class="magazine-viewport" id="flipfull">
+         
+        
+            <div class="container">
+                <div class="magazine">
+                    
+                    <div ignore="1" class="next-button"></div>
+                    <div ignore="1" class="previous-button"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div id="slider-bar" class="turnjs-slider">
+                        <div id="slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+    
+    <script type="text/javascript" src="/web/site/flipbook/js/core.js"></script>
+    <script type="text/javascript">
+        yepnope({
+            test: Modernizr.csstransforms,
+            yep: ['/web/site/flipbook/lib/turn.min.js'],
+            nope: ['/web/site/flipbook/lib/turn.html4.min.js', '/web/site/flipbook/css/jquery.ui.html4.css'],
+            both: ['/web/site/flipbook/lib/zoom.min.js', '/web/site/flipbook/css/jquery.ui.css', '/web/site/flipbook/js/magazinenolink.js', '/web/site/flipbook/css/magazine.css'],
+            complete: loadApp
+        });
+    </script>
+    
+    
+    
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144220429-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144220429-1');
+</script>    
+    
+ 
+
+       
+       <script>
+var elem = document.getElementById("flipfull");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  } else if (elem.webkitEnterFullscreen) {
+       elem.webkitEnterFullscreen(); //for iphone this code worked
+  }
+}
+</script>
+
+  
+
+   
+</body>
+</html>
+
