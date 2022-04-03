@@ -399,6 +399,7 @@
   transition-duration: 4s;
   transition-delay: 2s;
   background: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 .text:hover {
   background-color: rgba(0, 0, 0, 0.356);
