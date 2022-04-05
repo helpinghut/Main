@@ -1,178 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <title>Our Impact</title>
 
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="navbar-new.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer-new.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest">
-    <title>Our Reach</title>
-</head>
+  </head>
+  <style>
+    * {
+      font-family: 'Source Sans Pro', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-<body>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:wght@500&family=Lateef&family=Lato&display=swap");
+    .main-content {
+      background-color: black;
 
-        * {
-            box-sizing: border-box;
-        }
+    }
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 1rem;
-            background-color: black;
-        }
+    #slider {
+      margin: 0 auto;
+      height: 40%;
+      width: 33%;
+      overflow: hidden;
+      padding-top: 80px;
+    }
 
-        .ourReach h1 {
-            font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
-                "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black",
-                "sans serif";
-            margin: 50px 0 0 0;
-            font-size: 6rem;
-        }
 
-        .card-container {
-            display: flex;
-            margin: 80px auto;
-            width: 100%;
-            max-width: 100%;
-            min-width: 70%;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .card-container>div {
-            margin: 2em;
-        }
+    .slides img {
+      width: 100%;
+      border: solid gray 15px;
+    }
 
-        .panel,
-        .card {
-            position: relative;
-            font-family: "Helvetica Neue", sans-serif;
-            background-color: #000;
-        }
 
-        .card img {
-            height: 250px;
-            width: 250px;
-            border: solid 1px #000;
-            border-radius: 20px;
-            filter: drop-shadow(1px 10px 5px rgba(0, 0, 0, 0.4));
-        }
 
-        .card:hover {
-            transform: scale(1.2);
-            transition: all 0.5s ease-in-out;
-            z-index: 99;
-        }
+    .active {
+      background: rgb(90, 89, 89);
+    }
 
-        .card:not(hover) {
-            transform: scale(1);
-            transition: all 0.5s ease-in-out;
-        }
+    @media (max-width: 567px) {
+      #slider {
+        width: 100%;
+      }
+    }
 
-        .card1 {
-            transform: scale(1.2);
-            background-position: center;
-        }
-
-        .card h2 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 3rem;
-            /* position: absolute;
-            top: 250px;
-            left: 23%; */
-        }
-
-        .card h3 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 2.7rem;
-            /* position: absolute;
-            top: 290px;
-            left: 23%; */
-        }
-
-        .card h4 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 2.7rem;
-            /* position: absolute;
-            top: 340px;
-            left: 23%; */
-        }
-
-        .card1:hover {
-            background-position: left;
-            transition: 1s ease-in;
-        }
-
-        .card2 {
-            background-position: left;
-        }
-
-        .card2:hover {
-            background-position: center;
-            transition: 1s ease-in;
-        }
-
-        .card3 {
-            background-image: url("food1.jpg");
-            background-position: left;
-        }
-
-        .card3:hover {
-            background-position: center;
-            transition: 1s ease-in;
-        }
-
-        .card4 {
-            background-image: url("help2.png");
-            background-position: center;
-        }
-
-        .card4:hover {
-            background-position: right;
-            transition: 1s ease-in;
-        }
-
-        @media (max-width: 900px) {
-            h1 {
-                text-align: center;
-            }
-
-            .card-container {
-                flex-direction: column;
-                flex-wrap: wrap;
-                margin: auto;
-                align-items: center;
-            }
-        }
-
-        .page-title {
+    .page-title {
         margin-bottom: 6rem;
       padding-top: 15px;
         font-size: 8rem;
@@ -203,75 +114,45 @@
           font-size: 4rem;
           text-align: center;
         }
-    }
-    </style>
+      }
 
 
-<div class="header1">
-    <marquee behavior="" direction="left">
-      <li>HELPING HUT NGO
-      </li>
-    </marquee>
-  </div>
-    <nav></nav>
-    <script src="navbar-new.js"></script>
-    <header>
-        <h1 class="page-title">OUR REACH</h1>
-      </header>
-    <main>
-        <div class="card-container">
-            <div class="card card1">
-                <figure>
-                    <img src="slide4.jpg">
-                    <figcaption>
-                        <h2>1000 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-book" aria-hidden="true"></i> Study kits</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="card card2">
-                <figure>
-                    <img src="cl2.jpg">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-black-tie" aria-hidden="true"></i> Clothes</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="card card2">
-                <figure>
-                    <img src="food1.jpg">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-cutlery" aria-hidden="true"></i> Food Packets</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="card card2">
-                <figure>
-                    <img src="help2.png">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-paw" aria-hidden="true"></i> Street animals</h3>
-                        <h4>fed</h4>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </main>
+  </style>
+  <body>
+    <div class="header" style="background-color: gray;">
+      <marquee behavior="" direction="left" >
+        <li>HELPING HUT NGO</li>
+      </marquee>
     </div>
-</body>
+    <nav></nav>
+<script src="navbar-new.js"></script>
 
-<footer></footer>
+<header>
+  <h1 class="page-title">OUR Reach</h1>
+</header>
+
+    <div class="main-content">
+
+      <div id="slider">
+
+          <div class="slides">
+            <img src="Map.jpg" width="100%" />
+          </div>
+
+
+      </div>
+
+
+
+
+
+  </body>
+  <footer></footer>
 <script src="footer-new.js"></script>
 <div class="header1">
-    <marquee behavior="" direction="left">
-      <li>HELPING HUT NGO
-      </li>
-    </marquee>
-  </div>
-
+  <marquee behavior="" direction="left">
+    <li>HELPING HUT NGO
+    </li>
+  </marquee>
+</div>
 </html>
