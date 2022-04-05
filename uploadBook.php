@@ -12,6 +12,11 @@ if(isset($_POST['submit'])) {
     $description = $_POST['description'];
     $isbn = $_POST['isbn'];
     $cover_url = 'https://covers.openlibrary.org/b/isbn/'.$isbn.'-L.jpg';
+    $class_grade = 'not applicable';
+
+    if(isset($_POST['class_grade'])) {
+        $class_grade = $_POST['class_grade'];
+    }
     
     // insert images into donor_name_isbn folder
     $targetDir = './media/bookDonations/'.$donor_name.'_'.$isbn;
@@ -57,7 +62,7 @@ if(isset($_POST['submit'])) {
     move_uploaded_file($random_image_tmp, $random_image_path);
 
     // insert into sql table book_donations
-    $sql = "INSERT INTO book_donations (create_time, update_time, donor_name, donor_contact, donor_email, book_name, author, description, isbn, cover_url, front, back, random) VALUES (NOW(), NOW(), '$donor_name', '$donor_contact', '$donor_email', '$book_name', '$author_name', '$description', '$isbn', '$cover_url', '$front_image_path', '$back_image_path', '$random_image_path')";
+    $sql = "INSERT INTO book_donations (create_time, update_time, donor_name, donor_contact, donor_email, book_name, author, class_grade, description, isbn, cover_url, front, back, random) VALUES (NOW(), NOW(), '$donor_name', '$donor_contact', '$donor_email', '$book_name', '$author_name', '$class_grade', '$description', '$isbn', '$cover_url', '$front_image_path', '$back_image_path', '$random_image_path')";
     $result = $conn->query($sql);
 
     //show confirmation alert

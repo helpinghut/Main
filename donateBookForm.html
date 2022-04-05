@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <form method="POST" action="uploadBook.php" enctype="multipart/form-data">
                         <div class="form-row">
-                            <div class="name">Full name</div>
+                            <div class="name">Your Full name</div>
                             <div class="value">
                                 <input class="input--style-6" type="text" name="donor_name" required>
                             </div>
@@ -80,7 +80,7 @@
                                                 if (this.status == 200) {
                                                     let response = JSON.parse(this.responseText);
                                                     if (response.totalItems == 0) {
-                                                        document.getElementById('isbn_check').innerHTML = '<span class="text-danger">Invalid ISBN or book not found, kindly enter the correct details manually</span>';
+                                                        document.getElementById('isbn_check').innerHTML = '<span class="text-danger">Invalid ISBN or book not found, kindly enter the book details manually</span>';
                                                     } else {
                                                         document.getElementById('isbn_check').innerHTML = '<span class="text-success">Valid ISBN</span>';
                                                     }
@@ -117,6 +117,12 @@
                             <div class="name">Author name</div>
                             <div class="value">
                                 <input class="input--style-6" type="text" name="author_name" id="author_name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Class / Grade <br> (if applicable)</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="class_grade" id="class_grade">
                             </div>
                         </div>
                         <div class="form-row">
