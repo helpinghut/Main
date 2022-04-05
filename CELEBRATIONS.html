@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-    <script src="CELEBRATIONS.js"></script>
+    
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
@@ -283,6 +283,43 @@
                 </div>
             </div>
     </section>
+        
+    <section class="valentine" id="sec">
+        <div class="container my-5">
+            <div class="row">
+                <div class="heading">
+                    <h2 style="width:100%; text-align: center; font-weight: bold;">VALENTINE'S DAY CELEBRATION</h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5 mt-4 text" style="padding-top: 13px;">                       
+                        <p class="lead">Every year, Valentine’s Day comes as a reminder for us to celebrate our loved ones. The special occasion, celebrated annually and worldwide on February 14, is a commemoration of love, friendship and togetherness .It is believed that Valentine’s Day is named after a Saint Valentine. 
+                            <span id="dots5">...</span>
+                            <span id="more5">Our members of "Helping Hut NGO" celebrated this special day with some special children. Spreading smiles on their faces, seeing their happy faces really elevated the meaning of this day to an another level. All of us can be a reason behind someone's smile.</span></p>
+                                <button onclick="myFunction5()" id="myBtn5" style="background-color: black; border: none;">Read more</button>   
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding-top: 13px;">
+                    <div class="image" id="slideshow7">
+                        <div>
+                            <img src="vd1.png" style="border: 10px solid wheat; border-radius: 8px;" width="100%" height="100%">
+                        </div>
+                        <div>
+                            <img src="vd2.jpg" style="border: 10px solid wheat; border-radius: 8px;" width="100%" height="100%">
+                        </div>
+                        <div>
+                            <img src="vd3.jpg" style="border: 10px solid wheat; border-radius: 8px;" width="100%" height="100%">
+                        </div>
+                        <div>
+                            <img src="vd4.png" style="border: 10px solid wheat; border-radius: 8px;" width="100%" height="100%">
+                        </div>
+                        <div>
+                            <img src="vd5.png" style="border: 10px solid wheat; border-radius: 8px;" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
 
     <footer></footer>
     <script src="footer-new.js"></script>
@@ -290,7 +327,8 @@
         <marquee behavior="" direction="left">
           <li>Ensuring Basic Needs through Positive Deeds
           </li>
-        </marquee>  
+        </marquee> 
+        <script src="CELEBRATIONS.js"></script>
         <script>
             function myFunction() {
                 var dots = document.getElementById("dots");
@@ -355,6 +393,20 @@
                 var dots = document.getElementById("dots4");
                 var moreText = document.getElementById("more4");
                 var btnText = document.getElementById("myBtn4");    
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                }
+            }
+            function myFunction5() {
+                var dots = document.getElementById("dots5");
+                var moreText = document.getElementById("more5");
+                var btnText = document.getElementById("myBtn5");    
                 if (dots.style.display === "none") {
                     dots.style.display = "inline";
                     btnText.innerHTML = "Read more"; 
