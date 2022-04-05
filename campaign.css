@@ -3,9 +3,12 @@
 
 *
 {
-    font-family: 'BioRhyme',serif !important;
+    font-family: 'BioRhyme',serif;
 }
 
+.more{
+    font-family: 'BioRhyme',serif;
+}
 #head {
     background-color: black;
     color: blanchedalmond;
