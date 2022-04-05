@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,180 +30,99 @@
 <body>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:wght@500&family=Lateef&family=Lato&display=swap");
-
-        * {
-            box-sizing: border-box;
+        body{
+            overflow-x:hidden;
         }
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 1rem;
-            background-color: black;
-        }
-
-        .ourReach h1 {
-            font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
-                "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black",
-                "sans serif";
-            margin: 50px 0 0 0;
-            font-size: 6rem;
-        }
-
-        .card-container {
-            display: flex;
-            margin: 80px auto;
-            width: 100%;
-            max-width: 100%;
-            min-width: 70%;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-container>div {
-            margin: 2em;
-        }
-
-        .panel,
-        .card {
-            position: relative;
-            font-family: "Helvetica Neue", sans-serif;
-            background-color: #000;
-        }
-
-        .card img {
-            height: 250px;
-            width: 250px;
-            border: solid 1px #000;
-            border-radius: 20px;
-            filter: drop-shadow(1px 10px 5px rgba(0, 0, 0, 0.4));
-        }
-
-        .card:hover {
-            transform: scale(1.2);
-            transition: all 0.5s ease-in-out;
-            z-index: 99;
-        }
-
-        .card:not(hover) {
-            transform: scale(1);
-            transition: all 0.5s ease-in-out;
-        }
-
-        .card1 {
-            transform: scale(1.2);
-            background-position: center;
-        }
-
-        .card h2 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 3rem;
-            /* position: absolute;
-            top: 250px;
-            left: 23%; */
-        }
-
-        .card h3 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 2.7rem;
-            /* position: absolute;
-            top: 290px;
-            left: 23%; */
-        }
-
-        .card h4 {
-            color: white;
-            font-family: "Anton", sans-serif;
-            font-size: 2.7rem;
-            /* position: absolute;
-            top: 340px;
-            left: 23%; */
-        }
-
-        .card1:hover {
-            background-position: left;
-            transition: 1s ease-in;
-        }
-
-        .card2 {
-            background-position: left;
-        }
-
-        .card2:hover {
-            background-position: center;
-            transition: 1s ease-in;
-        }
-
-        .card3 {
-            background-image: url("food1.jpg");
-            background-position: left;
-        }
-
-        .card3:hover {
-            background-position: center;
-            transition: 1s ease-in;
-        }
-
-        .card4 {
-            background-image: url("help2.png");
-            background-position: center;
-        }
-
-        .card4:hover {
-            background-position: right;
-            transition: 1s ease-in;
-        }
-
-        @media (max-width: 900px) {
-            h1 {
-                text-align: center;
-            }
-
-            .card-container {
-                flex-direction: column;
-                flex-wrap: wrap;
-                margin: auto;
-                align-items: center;
-            }
-        }
-
-        .page-title {
-        margin-bottom: 6rem;
-      padding-top: 15px;
-        font-size: 8rem;
+       .page-title {
+        margin-bottom: 1rem;
+        padding-top: 15px;
+        font-size: 5rem;
         font-weight: 100;
         text-transform: uppercase;
         letter-spacing: -0.4px;
         line-height: 8rem;
         color: black;
         text-align: center;
-      }
-      @media only screen and (max-width: 760px) {
-        .page-title {
-          margin-bottom: 6rem;
-          font-size: 7rem;
-          text-align: center;
         }
-      }
-      @media only screen and (max-width: 580px) {
+
+        @media only screen and (max-width: 580px) {
         .page-title {
-          margin-bottom: 4rem;
-          font-size: 6rem;
-          text-align: center;
-        }
-      }
-      @media only screen and (max-width: 370px) {
-        .page-title {
-          margin-bottom: 0;
+          margin-bottom: 1rem;
           font-size: 4rem;
           text-align: center;
         }
-    }
+      }
+      @media only screen and (max-width: 410px) {
+        .page-title {
+          margin-bottom: 0.5rem;
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+      @media only screen and (max-width: 310px) {
+        .page-title {
+          margin-bottom: 0rem;
+          font-size: 2rem;
+          text-align: center;
+        }
+      }
+        main{
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+        
+        img{
+            border-radius: 15px;
+        }
+        .card{
+            margin: 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border-radius: 10px;
+            transition: transform 1s ease-in;
+            font-family:"Anton", sans-serif;
+        }
+        /* .card:hover {
+                transform: scale(1.2);
+            } */
+
+            .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(94, 94, 94, 0.507), 0 4px 8px rgba(0,0,0,.06);
+        }
+        .card-body{
+            font-family:"Anton", sans-serif;
+
+        }
+
+        .card h1,h2,h3,h4{
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .row{
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+
+        @media (max-width:600px)
+        {
+            .row{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        
     </style>
 
 <div class="header">
@@ -217,47 +136,71 @@
         <h1 class="page-title">OUR IMPACT</h1>
       </header>
     <main>
-        <div class="card-container">
-            <div class="card card1">
-                <figure>
-                    <img src="slide4.jpg">
-                    <figcaption>
-                        <h2>1000 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-book" aria-hidden="true"></i> Study kits</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
+        <div class="row">
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/st1.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+              <h2>1000 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+              <h3><i class="fa fa-book" aria-hidden="true"></i> Study kits</h3>
+              <h3>distributed</h3>
             </div>
-            <div class="card card2">
-                <figure>
-                    <img src="cl2.jpg">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-black-tie" aria-hidden="true"></i> Clothes</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/cl2.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3><i class="fa fa-black-tie" aria-hidden="true"></i> Clothes</h3>
+                <h4>distributed</h4>
             </div>
-            <div class="card card2">
-                <figure>
-                    <img src="food1.jpg">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-cutlery" aria-hidden="true"></i> Food Packets</h3>
-                        <h4>distributed</h4>
-                    </figcaption>
-                </figure>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/food1.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3><i class="fa fa-cutlery" aria-hidden="true"></i> Food Packets</h3>
+                <h4>distributed</h4>
             </div>
-            <div class="card card2">
-                <figure>
-                    <img src="help2.png">
-                    <figcaption>
-                        <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
-                        <h3><i class="fa fa-paw" aria-hidden="true"></i> Street animals</h3>
-                        <h4>fed</h4>
-                    </figcaption>
-                </figure>
+          </div>
+    
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/help2.png" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3><i class="fa fa-paw" aria-hidden="true"></i> Street animals</h3>
+                <h4>fed</h4>
             </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/san1.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3> Sanitary Pad</h3>
+                <h3>distributed</h3>
+                <h3>in slum areas</h3>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/pla3.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3> Sapling planted</h3>
+                <h4>in rural areas</h4>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img src="ourImpactAssets/blanket3.jpg" class="img-responsive" alt="...">
+            <div class="card-body">
+                <h2>500 <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <h3> Blankets</h3>
+                <h3> distributed</h3>
+                <h4>to needy</h4>
+            </div>
+          </div>
         </div>
     </main>
     </div>
