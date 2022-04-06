@@ -3,10 +3,10 @@
 
 *
 {
-    font-family: 'BioRhyme', serif;
+    font-family: 'BioRhyme', serif ; 
 }
 .more{
-    font-family: 'BioRhyme', serif;
+    font-family: 'BioRhyme', serif ; 
 }
 
 .waviy {
@@ -48,6 +48,7 @@
 p{
     font-weight: 300;
     font-family: 'BioRhyme', serif;
+    text-align: justify;
 }
 
 #fir
@@ -328,6 +329,14 @@ p{
     right: 10px; 
     bottom: 10px; 
 }
+
+#slideshow7 { 
+    margin: auto; 
+    position: relative; 
+    height: 300px; 
+    padding: 10px; 
+}
+
 
 #slideshow7 > div { 
     position: absolute; 
