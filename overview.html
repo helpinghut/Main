@@ -99,8 +99,9 @@
     }
 
     .page-title {
-        margin-bottom: 6rem;
-      padding-top: 15px;
+        /* margin-bottom: 6rem;
+        padding-top: 15px; */
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 8rem;
         font-weight: 100;
         text-transform: uppercase;
@@ -111,7 +112,7 @@
       }
       @media only screen and (max-width: 760px) {
         .page-title {
-          margin-bottom: 6rem;
+          margin-bottom: 3rem;
           font-size: 7rem;
           text-align: center;
         }
@@ -133,18 +134,35 @@
 
     .about-us {
       padding: 30px 0;
-      background-color: #ececec;
+      /* background-color: #ececec; */
+      background-color: white;
     }
     .about-us .h1 {
       font-size: 50px;
       color: #848484;
     }
     .about-us .responsive-paragraph {
-      color: #848484;
+      color: #636363;
       font-size: 20px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
     }
     a {
       text-decoration: none;
+    }
+
+    .page-title,.main-content{
+      animation-name: animate;
+      animation-duration: 5s;
+    }
+
+    @keyframes animate {
+      from{opacity: 0;}  
+      to{opacity: 1;}
+    }
+
+    .container{
+      background-color: #ececec;
+      padding: 2rem;
     }
   </style>
   <body>
