@@ -19,6 +19,13 @@ html {
     padding-bottom: 10px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}  
 .main-nav {
     list-style-type: none;
     display: none;
@@ -63,10 +70,12 @@ html {
     font-size: 16px;
     display: block;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 
 }
+
 .my-dropdown-content {
     display: none;
 
@@ -125,6 +134,7 @@ a:hover{
     .my-dropdown:hover .my-dropdown-content {
         display: block;
     }
+
     .my-dropdown-content a {
         float: none;
         color: black;
@@ -133,6 +143,7 @@ a:hover{
         display: block;
         text-align: left;
     }
+
     .my-dropdown {
         float: left;
         overflow: hidden;
@@ -147,13 +158,15 @@ a:hover{
         z-index: 2;
     }
 }
+
 /*  Button css   */
 /* buttons */
 
 .btn-rk {
     text-align: center;
-  }
-  .btn-hovers {
+}
+
+.btn-hovers {
     width: 150px;
     font-size: 16px;
     font-weight: 600;
@@ -161,7 +174,7 @@ a:hover{
     cursor: pointer;
     margin: -13px;
     height: 55px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
     /* border-bottom-right-radius: 50px; */
@@ -172,61 +185,66 @@ a:hover{
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     /* border-end-start-radius: 50px; */
-  }
-  
-  .btn-hovers:hover {
+}
+
+.btn-hovers:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-  }
-  
-  .btn-hovers:focus {
+}
+
+.btn-hovers:focus {
     outline: none;
-  }
-  
-  .btn-hovers.color-1 {
+}
+
+.btn-hovers.color-1 {
     /* background-image: linear-gradient(to right, rgb(26, 25, 25), rgb(34 34 34 / 87%), rgb(34 34 34 / 87%), rgb(26, 25, 25)); */
     /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     background-color: goldenrod;
-  }
-  .btn-hovers.color-2 {
-    background-image: linear-gradient(to right, #4e1f81, #e43603, #b13056, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.btn-hovers.color-2 {
+    background-image: linear-gradient(to right, #706c74, #1a1818, #916874, #272423);
+    box-shadow: 0 4px 15px 0 rgba(13, 12, 12, 0.75);
     border: none;
-  }
-  .btn-hovers.color-6 {
+}
+
+.btn-hovers.color-6 {
     /* background-image: linear-gradient(to right, rgb(26, 25, 25), rgb(34 34 34 / 87%), rgb(34 34 34 / 87%), rgb(26, 25, 25)); */
     /* box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75); */
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     background-color: darkslategrey;
-  }
-
-  .btn-hovers:hover {
-  width: 175px;
-  transition-duration: 1s;
 }
- .color-6:hover{
+
+.btn-hovers:hover {
+    width: 175px;
+    transition-duration: 1s;
+}
+
+.color-6:hover {
     background-image: linear-gradient(to right, #08867c, #035c5c, #008686, #005d5d);
-    color:rgb(124, 230, 212);
+    color: rgb(124, 230, 212);
 }
- .color-1:hover{
-    background-image: linear-gradient(to right, #d1ab02, #eed70c, #c29e01, #dbb921);
-    color:rgb(102, 92, 3);
- }
 
-  @media only screen and (max-width: 600px) {
+.color-1:hover {
+    background-image: linear-gradient(to right, #d1ab02, #eed70c, #c29e01, #dbb921);
+    color: rgb(102, 92, 3);
+}
+
+@media only screen and (max-width: 600px) {
     .btn-hovers {
-      width: 118px;
-      margin: -8px;
-      margin-top: auto;
-      margin-bottom: auto;
+        width: 118px;
+        margin: -8px;
+        margin-top: auto;
+        margin-bottom: auto;
     }
+
     .btn-rk {
-      text-align: center;
+        text-align: center;
     }
-  }
+}

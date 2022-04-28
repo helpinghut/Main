@@ -28,40 +28,33 @@
   </head>
   <body>
     <style>
- 
+  
+
       .body-main {
         min-height: 100vh;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1.5rem;
         line-height: 1.5;
         font-weight: 300;
-        color: white;
-        /* background-color:black; */
-        background-color: #3a3737;
+        color: #dfdfdf;
+        background-color: #000;
         font-size: 62.5%;
       }
       .container {
         max-width: 120rem;
-        /* margin: 0 auto;
-        padding: 0 6rem 6rem 6rem; */
-        animation-name: animate;
-        animation-duration: 5s;
+        margin: 0 auto;
+        padding: 0 6rem 6rem 6rem;
       }
 
-      @keyframes animate {
-        from{opacity: 0;}
-        to{opacity: 1;}
-      }
       .page-title {
-        margin-bottom: 4rem;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 6rem;
+        font-family: 'Source Sans Pro', sans-serif;
         font-size: 8rem;
         font-weight: 100;
         text-transform: uppercase;
         letter-spacing: -0.4px;
         line-height: 8rem;
-        color: white;
-        font-weight: 500;
+        color: #fafafa;
         text-align: center;
       }
       @media only screen and (max-width: 760px) {
@@ -84,12 +77,8 @@
       }
       .content {
         display: flex;
-        /* justify-content: space-between; */
-        flex-direction: column;
-        /* align-items: flex-start; */
-        align-items: center;
-        margin: 2rem 0;
-
+        justify-content: space-between;
+        align-items: flex-start;
       }
       @media only screen and (max-width: 760px) {
         .content {
@@ -99,10 +88,8 @@
         }
       }
       .content__descriptor {
-        /* width: 14%; */
-        /* border-top: 1px solid #7b7b7b; */
-        width: 50%;
-        text-align: center;
+        width: 14%;
+        border-top: 1px solid #7b7b7b;
         padding-top: 4rem;
       }
       @media only screen and (max-width: 760px) {
@@ -123,17 +110,11 @@
         align-items: flex-end;
         gap: 1.7rem;
         width: 50%;
-        border: 1px solid #7b7b7b;
-        border-radius: 1rem;
-        /* border-bottom: 1px solid #7b7b7b; */
-        /* margin-right: 10rem; */
-        padding: 4rem 4rem;
-        font-size: 2.1rem;
-      }
-
-      .content__text-box:hover{
-        background-color: white;
-        color: black;
+        border-top: 1px solid #7b7b7b;
+        border-bottom: 1px solid #7b7b7b;
+        margin-right: 10rem;
+        padding: 4rem 0;
+        font-size: 2rem;
       }
       @media only screen and (max-width: 920px) {
         .content__text-box {
@@ -143,7 +124,7 @@
       @media only screen and (max-width: 760px) {
         .content__text-box {
           width: 100%;
-          padding: 2rem;
+          padding: 2rem 0;
         }
       }
       @media only screen and (max-width: 580px) {

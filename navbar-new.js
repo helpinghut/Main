@@ -62,4 +62,19 @@ fetch('./navbar-new.html').then(function (response) {
     scriptToinsert.innerHTML = toggleScript.innerHTML;
     //append the script in the body
     document.body.appendChild(scriptToinsert);
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the offset position of the navbar
+    var sticky = current_nav.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            current_nav.classList.add("sticky")
+        } else {
+            current_nav.classList.remove("sticky");
+        }
+    }
 });

@@ -189,7 +189,7 @@
   padding: 30px;
   border-radius: 5px;
 
-    background: linear-gradient(132deg, #999999, #e4e0eb, #e2e5ff);
+    /* background: linear-gradient(132deg, #999999, #e4e0eb, #e2e5ff); */
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     position: relative;
