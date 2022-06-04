@@ -361,3 +361,14 @@ p{
     right: 10px; 
     bottom: 10px; 
 }
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+.modify{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
