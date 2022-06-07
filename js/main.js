@@ -714,6 +714,8 @@
         }
     }
 
+    
+
     document.addEventListener('DOMContentLoaded', function() {
         var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
 

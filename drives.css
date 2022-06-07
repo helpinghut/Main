@@ -37,11 +37,11 @@ p{
     font-family: 'BioRhyme', serif;
 }
 
-#food,#cloth,#ration,#plant
+#fir
 {
     padding: 25px 0;
 }
-#pad,#stat,#mask,#blanket
+#sec
 {
     background-color: black;
     color: blanchedalmond;
@@ -160,14 +160,3 @@ p{
     bottom: 10px; 
 }
 
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-.modify{
-    width: 80%;
-    margin: auto;
-    text-align: left;
-    padding: 1rem 0;
-}

@@ -163,16 +163,3 @@ p{
     bottom: 10px; 
 }
 
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-.modify{
-    width: 60%;
-}
-@media screen and (max-width : 992px){
-    .modify{
-        width: 90%;
-    }
-}

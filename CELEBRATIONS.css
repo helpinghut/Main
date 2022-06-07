@@ -191,7 +191,7 @@ p{
 
 #more,
 #more1,
-#more2,#more3,#more4,#more5,#more8{
+#more2,#more3,#more4,#more5{
     display: none;
 }
 
@@ -344,31 +344,4 @@ p{
     left: 10px; 
     right: 10px; 
     bottom: 10px; 
-}
-
-#slideshow8 { 
-    margin: auto; 
-    position: relative; 
-    height: 300px; 
-    padding: 10px; 
-}
-
-
-#slideshow8 > div { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
-    bottom: 10px; 
-}
-
-.row{
-    display: flex;
-    flex-direction: column;
-}
-
-.modify{
-    width: 80%;
-    margin: auto;
-    text-align: left;
 }

@@ -90,14 +90,3 @@ setInterval(function() {
     .appendTo('#slideshow7');
 },  3000);
 
-$("#slideshow8 > div:gt(0)").hide();
-
-setInterval(function() { 
-  $('#slideshow8 > div:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('#slideshow8');
-},  3000);
-
