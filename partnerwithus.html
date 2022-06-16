@@ -1,0 +1,332 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/site.webmanifest">
+  <title>Our Motive</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="navbar-new.css">
+  <link rel="stylesheet" href="footer-new.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .cont {
+      display: flex;
+      flex-direction: row;
+      /* width: 80%;
+      margin: 0 10%; */
+      flex-wrap: wrap;
+      margin-top: 5rem;
+    }
+
+    .div1 {
+      /* background-color: aliceblue; */
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      flex-direction: column;
+    }
+
+    .div2 {
+      /* background-color: antiquewhite; */
+      display: flex;
+      width: 50%;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .div1,.div2{
+      border-radius: 5%;
+      padding: 2% 1%;
+    }
+    .cls {
+      /* height: 30rem;
+      width: 50rem;
+      margin: 2rem 3rem; */
+      width: 60%;
+      margin: 4% 20%;
+    }
+
+    .para1 {
+      font-size: 3rem;
+      font-weight: bold;
+      /* width: 50%; */
+      width: 60%;
+      margin: 0 20%;
+      /* margin: 2rem 3rem; */
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .hd {
+      font-size: 4rem;
+      font-weight: bold;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 0;
+      /* text-align: center; */
+    }
+
+    .para2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      /* font-weight: 400; */
+    }
+
+    .bttn {
+      background-color: rgb(112, 112, 251);
+      text-decoration: none;
+      height: 5rem;
+      width: 10rem;
+      font-size: 1.8rem;
+      margin: 3rem 1rem;
+      border-radius: 15%;
+    }
+
+    .div1:hover{
+        background-color: antiquewhite;
+      }
+
+    .div2:hover{
+        background-color: antiquewhite;
+      }
+    @media screen and (max-width: 1481px) {
+      .cont {
+        flex-direction: column;
+        background-color: aliceblue;
+        padding: 2% 0;
+      }
+
+      .div1,
+      .div2 {
+        width: 100%;
+      }
+
+      .para1 {
+        font-size: 2rem;
+      }
+
+      .para2,
+      .butons,
+      .hd {
+        width: 60%;
+        margin: 1% 20%;
+      }
+
+      .hd {
+        margin: 5% 20%;
+        font-size: 2.5rem;
+      }
+
+      .bttn {
+        margin: 0 0.5rem;
+        width: 8rem;
+        height: 4rem;
+      }
+
+      .outer1{
+        background-color: antiquewhite;
+      }
+    }
+
+    .outer1{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .orb{
+      display: flex;
+      flex-direction: column;
+      font-size: 2.3rem;
+      flex-wrap: wrap;
+      width: max-content;
+      height:max-content;
+      border-radius: 50px;
+      margin: 2% 1.2%;
+      padding: 0.5% 1%;
+      /* border: 2px solid black; */
+    }
+
+    .pic {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+    }
+    em{
+      margin: 5% 0;
+    }
+
+    .colab{
+      text-align: center;
+      font-size: 4rem;
+    }
+    /* .orb :hover{
+      background-color: bisque;
+    } */
+
+    @media screen and (max-width: 689px) {
+      .orb{
+        width: 50%;
+        margin: 2% 25%
+      }
+
+      .colab{
+        font-family: 0.5rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar-1">
+    <span class="my-navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a href="index.html" class="logo"><img src="logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
+    <div class="btn-rk">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">
+        <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-1">Join
+          us</button></a>
+      <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
+        <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-6">Donate</button></a>
+    </div>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="index.html" class="nav-links">Home</a>
+      </li>
+      <li class="my-dropdown" id="about-us-toggle">
+        <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
+        <div class="my-dropdown-content" id="about-us-menu">
+          <a href="overview.html">Overview</a>
+          <a href="ourMotive.html">Our Motive</a>
+          <a href="governingBody.html">Governing Body</a>
+          <a href="teamRepresentative.html">Team Representatives</a>
+          <a href="Team.html">Our Teams</a>
+          <a href="ourimpactnew.html">Our Impact</a>
+          <a href="ourReachNew.html">Our Reach</a>
+          <a href="mediaCoverage.html">Media Coverage</a>
+        </div>
+      </li>
+      <li class="my-dropdown" id="our-works-toggle">
+        <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
+        <div class="my-dropdown-content" id="our-works-menu">
+          <a href="Campaign.html">Campaigns</a>
+          <a href="CELEBRATIONS.html">Celebrations</a>
+          <a href="drives.html">Drives</a>
+          <a href="Udaan.html">Udaan - Street School</a>
+          <a href="Beggar_transform.html">Beggar Transformation</a>
+          <a href="charity_carnival.html">Charity Carnival</a>
+          <a href="competitions.html">Competitions</a>
+        </div>
+      </li>
+      <li>
+        <a href="book_donations.html" class="nav-links">Book Donations</a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-links">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+  <h1 style="text-align: center; font-size: 6rem;">Partner with us</h1>
+
+  <div class="outer">
+    <h2 class="colab">Our Collaborators</h2>
+
+    <div class="outer1">
+      <div class="orb">
+        <a href="https://www.instagram.com/enactus_dduc/?hl=en">
+          <img src="./partner/enactus.jpg" alt="" class="pic">
+        </a>
+        <em>Enactus DDUC</em>
+      </div>
+      <div class="orb">
+        <a href="https://www.instagram.com/nss.dduc/?hl=en">
+          <img src="./partner/nssdduc.jpg" alt="" class="pic">
+        </a>
+        <em>NSS DDUC & MITS</em>
+      </div>
+      <div class="orb">
+        <a href="https://www.feedingindia.org/">
+          <img src="./partner/Zomato.jpg" alt="" class="pic">
+        </a>
+        <em>Zomato feeding India</em>
+      </div>
+      <div class="orb">
+        <a href="https://www.instagram.com/flashlight_initiative/?hl=en">
+          <img src="./partner/flashlight.png" alt="" class="pic">
+        </a>
+        <em>Flashlight Initiative</em>
+      </div>
+      <div class="orb">
+        <a href="https://www.instagram.com/silizium_dduc/">
+          <img src="./partner/silizium.jpg" alt="" class="pic">
+        </a>
+        <em>Silizium DDUC</em>
+      </div>
+      <div class="orb">
+        <a href="https://www.charitylearningfestival.com/">
+          <img src="./partner/charitylearning.jpg" alt="" class="pic">
+        </a>
+        <em>Charity Learning festival</em>
+      </div>
+      <div class="orb">
+        <a href="https://letsbroach.com/">
+          <img src="./partner/letsboach.jpg" alt="" class="pic">
+        </a>
+        <em>Let's broach</em>
+      </div>
+    </div>
+  </div>
+  <div class="cont">
+    <div class="div1">
+      <div class="para1">We at HELPING HUT NGO envision building a just and compassionate society by organizing
+        various
+        drives, campaigns, interactive sessions, and raising funds for the needy in order to make this world a
+        better
+        place to live in.</div>
+      <img class="cls" src="partner/feedingBGimage.avif" alt="">
+    </div>
+    <div class="div2">
+      <h1 class="hd">Let's do great things together</h1>
+      <p class="para2">Helping Hut NGO thus organises various activities which include online campaigns, ground work
+        and enthusiastic competitions.Some of our online campaigns were on to save water, to plant more trees and
+        the most impactful Utthan Abhiyan which was a step towards awareness of government policies to the needy
+        one. Various competitions organised touched many aspects of our life through art and craft, poetry, creative
+        writing and enhancing knowledge through quizzes. let's make earth a better place to live in.</p>
+      <div class="butons">
+        <button class="bttn">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform"
+            style="color: white ;">Join Us</a>
+        </button>
+
+        <button class="bttn">
+          <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view" style="color: white ;">Donate</a>
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="footer-new.js"></script>
+  <div class="header">
+    <marquee behavior="" direction="left">
+      <li>Ensuring basic needs through positive deeds</li>
+    </marquee>
+  </div>
+</body>
+
+</html>
