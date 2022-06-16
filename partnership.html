@@ -6,186 +6,277 @@
   <title>Partner With US</title>
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/c913d2b7f1.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="partner.css">
+  <link rel="stylesheet" href="navbar-new.css">
+
+  <style>
+    body {
+      background-image: url(partner/feedingBGimage.avif);
+      background-size:contain;
+      /* overflow: hidden; */
+      background-repeat: no-repeat;
+      background-color: rgb(55, 54, 54);
+    }
+
+    /* section {
+      font-size: 2rem;
+    } */
+
+    .orb {
+      width: 10rem;
+      height: 10rem;
+      /* background: #999; */
+      border-radius: 50px;
+      /* display: inline-block; */
+      display: flex;
+      flex-direction: column;
+      margin: 0 2rem;
+      /* margin: 4rem; */
+      float: left;
+      transition: all .2s ease-out;
+    }
+
+    .orb:hover {
+      /* transform: scale(1.2); */
+      opacity: .5;
+      cursor: pointer;
+    }
+
+    .marquee {
+      height: 14rem;
+      /* width: 800px; */
+      width: 100rem;
+      /* border: 2px solid black; */
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      margin: 4rem auto;
+    }
+
+    .marquee--inner {
+      display: block;
+      width: 250%;
+      margin: 1.5rem 0;
+      position: absolute;
+      animation: marque 20s linear infinite;
+    }
+
+    .marquee--inner:hover {
+      animation-play-state: paused;
+    }
+
+    /* .half {
+  float: left;
+  width: 10%;
+} */
+
+    span {
+      /* float: left; */
+      width: 50%;
+    }
+
+    @keyframes marque {
+      0% {
+        left: 0;
+      }
+
+      100% {
+        left: -100%;
+      }
+    }
+
+    .pic {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 
 <body>
- 
- <section id="title" >
-  <div class="container-fluid">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="">Helping Hut</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href=""></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href=""></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href=""></a>
-              </li>
-          </ul>
+  <nav class="navbar-1">
+    <span class="my-navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a href="index.html" class="logo"><img src="logo.jpg" width="70px" height="60px" alt="" srcset=""></a>
+    <div class="btn-rk">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">
+        <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-1">Join
+          us</button></a>
+      <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
+        <button style="font-weight: bolder;font-size: larger;" class="btn-hovers color-6">Donate</button></a>
+    </div>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="index.html" class="nav-links">Home</a>
+      </li>
+      <li class="my-dropdown" id="about-us-toggle">
+        <a href="#" class="nav-links">About us &nbsp;<i class="fa fa-caret-down"></i></a>
+        <div class="my-dropdown-content" id="about-us-menu">
+          <a href="overview.html">Overview</a>
+          <a href="ourMotive.html">Our Motive</a>
+          <a href="governingBody.html">Governing Body</a>
+          <a href="teamRepresentative.html">Team Representatives</a>
+          <a href="Team.html">Our Teams</a>
+          <a href="ourimpactnew.html">Our Impact</a>
+          <a href="ourReachNew.html">Our Reach</a>
+          <a href="mediaCoverage.html">Media Coverage</a>
+        </div>
+      </li>
+      <li class="my-dropdown" id="our-works-toggle">
+        <a href="#" class="nav-links">Our Works &nbsp;<i class="fa fa-caret-down"></i></a>
+        <div class="my-dropdown-content" id="our-works-menu">
+          <a href="Campaign.html">Campaigns</a>
+          <a href="CELEBRATIONS.html">Celebrations</a>
+          <a href="drives.html">Drives</a>
+          <a href="Udaan.html">Udaan - Street School</a>
+          <a href="Beggar_transform.html">Beggar Transformation</a>
+          <a href="charity_carnival.html">Charity Carnival</a>
+          <a href="competitions.html">Competitions</a>
+        </div>
+      </li>
+      <li>
+        <a href="book_donations.html" class="nav-links">Book Donations</a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-links">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="sect1" style="color: white;">
+    <div class="container-fluid">
+      
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>We at HELPING HUT NGO envision building a just and compassionate society by organizing various drives,
+            campaigns, interactive sessions, and raising funds for the needy in order to make this world a better place
+            to live in.</h1>
+      
+        </div>
+
+        <div class="col-lg-6">
+      
+        </div>
       </div>
-   </nav>
 
-   
-
-
-
-    <!-- Title -->
-    <div class="row">
-      <style>
-        body{
-          background-image: url(partner/feedingBGimage.avif);
-        }
-      </style>
-
-     <div class="col-lg-6">
-       <h1>We at HELPING HUT NGO envision building a just and compassionate society by organizing various drives, campaigns, interactive sessions, and raising funds for the needy in order to make this world a better place to live in.</h1>
-       <!-- <button type="button" class="btn btn-outline-light btn-lg download-button"> <i class="fa-solid fa-handshake"></i> </i>Partner With US</button> -->
-     </div>
-
-     <div class="col-lg-6">
-       <!-- <img class="tittle-image" src="images/feedingBGimage.avif" alt="iphone-mockup"> -->
-     </div>
-   </div>
-
-   </div>
+    </div>
   </section>
-
-
-  <!-- Features
-
-  <section id="features">
-    <div class="row"> 
-      <div class="col-lg-4 feature-box">
-        <i class="icon fa-solid fa-circle-check fa-4x"></i>
-        <h3>Easy to use.</h3>
-        <p>So easy to use, even your dog could do it.</p>
-      </div>
-  
-      <div class="col-lg-4 feature-box">
-        <i class="icon fa-solid fa-bullseye fa-4x"></i>
-        <h3>Elite Clientele</h3>
-        <p>We have all the dogs, the greatest dogs.</p>
-      </div>
-  
-      <div class="col-lg-4 feature-box"> 
-        <i class="icon fa-solid fa-heart fa-4x"></i>
-        <h3>Guaranteed to work.</h3>
-        <p>Find the love of your dog's life or your money back.</p>
-      </div>
-    </div> 
-  </section> -->
-
-
-  <!-- Partners -->
 
   <section id="testimonials">
-    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
-       <div class="carousel-inner">
-         <div class="carousel-item active">
-            <h2>Our Partners</h2>
+    <h1 style="font-size: 2rem ;">Our Collaborators</h1>
+    <div class="marquee">
+      <div class="marquee--inner">
+        <span>
+          <div class="orb">
             <a href="https://www.instagram.com/enactus_dduc/?hl=en">
-            <img class="testimonial-image" src="./partner/enactus.jpg" alt="enactus ddu"></a>
+              <img src="./partner/enactus.jpg" alt="" class="pic">
+            </a>
             <em>Enactus DDUC</em>
           </div>
-     
-          <div class="carousel-item">
-            <h2 class="testimonial-text">Our Partners</h2>
+          <div class="orb red">
             <a href="https://www.instagram.com/nss.dduc/?hl=en">
-            <img class="testimonial-image" src="./partner/nssdduc.jpg" alt="lady-profile"></a>
-            <em>NSS DDUC</em>
+              <img src="./partner/nssdduc.jpg" alt="" class="pic">
+            </a>
+            <em>NSS DDUC & MITS</em>
           </div>
-
-          <div class="carousel-item">
-            <h2 class="testimonial-text">Our Partners</h2>
+          <div class="orb yellow">
             <a href="https://www.feedingindia.org/">
-            <img class="testimonial-image" src="./partner/zomato.png" alt="lady-profile"></a>
-            <em>Zomato</em>
+              <img src="./partner/Zomato.jpg" alt="" class="pic">
+            </a>
+            <em>Zomato feeding India</em>
           </div>
-
-          <div class="carousel-item">
-            <h2 class="testimonial-text">Our Partners</h2>
+          <div class="orb blue">
             <a href="https://www.instagram.com/flashlight_initiative/?hl=en">
-            <img class="testimonial-image" src="./partner/flashlight.png" alt="lady-profile"></a>
-            <em>Flashlight Initiative </em>
+              <img src="./partner/flashlight.png" alt="" class="pic">
+            </a>
+            <em>Flashlight Initiative</em>
           </div>
-
-          <div class="carousel-item">
-            <h2 class="testimonial-text">Our Partners</h2>
+          <div class="orb orange">
             <a href="https://www.instagram.com/silizium_dduc/">
-            <img class="testimonial-image" src="./partner/silizium.jpg" alt="lady-profile"></a>
+              <img src="./partner/silizium.jpg" alt="" class="pic">
+            </a>
             <em>Silizium DDUC</em>
           </div>
-
-          <div class="carousel-item">
-            <h2 class="testimonial-text">Our Partners</h2>
+          <div class="orb purple">
             <a href="https://www.charitylearningfestival.com/">
-            <img class="testimonial-image" src="./partner/charitylearning.jpg" alt="lady-profile"></a>
+              <img src="./partner/charitylearning.jpg" alt="" class="pic">
+            </a>
             <em>Charity Learning festival</em>
           </div>
-       </div>
-
-       <div class="carousel-item">
-        <h2 class="testimonial-text">Our Partners</h2>
-        <a href="https://letsbroach.com/">
-        <img class="testimonial-image" src="./partner/letsboach.jpg" alt="lady-profile"></a>
-        <em>Let's broach</em>
+          <div class="orb green">
+            <a href="https://letsbroach.com/">
+              <img src="./partner/letsboach.jpg" alt="" class="pic">
+            </a>
+            <em>Let's broach</em>
+          </div>
+        </span>
+        <span>
+          <div class="orb">
+            <a href="https://www.instagram.com/enactus_dduc/?hl=en">
+              <img src="./partner/enactus.jpg" alt="" class="pic">
+            </a>
+            <em>Enactus DDUC</em>
+          </div>
+          <div class="orb red">
+            <a href="https://www.instagram.com/nss.dduc/?hl=en">
+              <img src="./partner/nssdduc.jpg" alt="" class="pic">
+            </a>
+            <em>NSS DDUC & MITS</em>
+          </div>
+          <div class="orb yellow">
+            <a href="https://www.feedingindia.org/">
+              <img src="./partner/Zomato.jpg" alt="" class="pic">
+            </a>
+            <em>Zomato feeding India</em>
+          </div>
+          <div class="orb blue">
+            <a href="https://www.instagram.com/flashlight_initiative/?hl=en">
+              <img src="./partner/flashlight.png" alt="" class="pic">
+            </a>
+            <em>Flashlight Initiative</em>
+          </div>
+          <div class="orb orange">
+            <a href="https://www.instagram.com/silizium_dduc/">
+              <img src="./partner/silizium.jpg" alt="" class="pic">
+            </a>
+            <em>Silizium DDUC</em>
+          </div>
+          <div class="orb purple">
+            <a href="https://www.charitylearningfestival.com/">
+              <img src="./partner/charitylearning.jpg" alt="" class="pic">
+            </a>
+            <em>Charity Learning festival</em>
+          </div>
+          <div class="orb green">
+            <a href="https://letsbroach.com/">
+              <img src="./partner/letsboach.jpg" alt="" class="pic">
+            </a>
+            <em>Let's broach</em>
+          </div>
+        </span>
       </div>
+    </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-   </div>
-
-      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button> -->
-   </div>
   </section>
 
- 
-  <!-- Press -->
-
-  <section id="press">
-    <!-- <h2>Our Previous Partners</h2>
-    <img class ="press-logo" src="images/techcrunch.png" alt="tc-logo">
-    <img class ="press-logo" src="images/tnw.png" alt="tnw-logo">
-    <img class ="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
-    <img class ="press-logo" src="images/mashable.png" alt="mashable-logo"> -->
-
-  
 
   <!-- Footer -->
-
-  <footer id="footer">
-
-    <p style="justify-content: center; padding-top: 1.5rem; font-size: 1.4rem;">© Copyright Helping Hut</p>
-
-  </footer>
-
-
+  <footer></footer>
+  <script src="footer-new.js"></script>
+  <div class="header">
+    <marquee behavior="" direction="left">
+      <li>Ensuring basic needs through positive deeds</li>
+    </marquee>
+  </div>
 </body>
 
 </html>
