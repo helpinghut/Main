@@ -362,10 +362,10 @@ p{
     bottom: 10px; 
 }
 
-.row{
+/* .row{
     display: flex;
     flex-direction: column;
-}
+} */
 
 .modify{
     width: 80%;
