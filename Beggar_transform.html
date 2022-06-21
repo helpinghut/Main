@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,39 +27,61 @@
     <title>Beggar Transformation</title>
 
     <style>
-
-        .container{
+        .container {
             font-size: 2.2rem;
             padding-top: 1rem;
         }
 
-        .div1{
+        .div1 {
             display: flex;
             flex-wrap: wrap;
         }
-        .img1{
+
+        .img1 {
             height: 35rem;
             margin: 2% auto;
         }
 
-        @media screen and (max-width: 541px){
-            .img1{
+        #slideshow8 {
+            margin: 2% 30%;
+            position: relative;
+            height: 300px;
+            /* padding: 10px; */
+            width: 40%;
+        }
+
+
+        #slideshow8>div {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        @media screen and (max-width: 777px) {
+            #slideshow8 {
                 width: 100%;
+                margin: 1% 0;
+            }
+
+            .div1{
+                margin-bottom: 5%;
             }
         }
     </style>
-        
+
 </head>
 
 <body>
     <div class="header" style="background-color: gray;">
-        <marquee behavior="" direction="left" >
-          <li>Ensuring basic needs through positive deeds</li>
+        <marquee behavior="" direction="left">
+            <li>Ensuring basic needs through positive deeds</li>
         </marquee>
-      </div>
-      <div class="row-1">
+    </div>
+    <div class="row-1">
         <nav class="navbar-1">
-          
+
         </nav>
         <script src="navbar-new.js"></script>
         <section class="heading" id="head">
@@ -73,28 +95,51 @@
         <section>
             <div class="container">
                 <div class="div1">
-                    <img src="beggary.jpg" alt="" class="img1">
-                    <img src="beggery2.jpg" alt="" class="img1">
+                    <div class="image" id="slideshow8">
+
+                        <div>
+                            <img src="beggary.jpg" style="border: 10px solid black; border-radius: 8px;" width="100%"
+                                height="100%">
+                        </div>
+                        <div>
+                            <img src="beggery2.jpg" style="border: 10px solid black; border-radius: 8px;" width="100%"
+                                height="100%">
+                        </div>
+                    </div>
+                    <!-- <img src="beggary.jpg" alt="" class="img1">
+                    <img src="beggery2.jpg" alt="" class="img1"> -->
                 </div>
                 <p>
-                    The moment you stop your car at the traffic red light, you see a dirty-looking woman with a child in her arm come running to you or a little boy with a running nose banging your car window, or a handicapped old man asking for alms. Begging is one of the most serious social issues in India. Giving beggars money will only provide a very short-term solution to a long-standing problem. By treating beggars with dignity and working with local charities and shelters, one can make a difference.
+                    The moment you stop your car at the traffic red light, you see a dirty-looking woman with a child in
+                    her arm come running to you or a little boy with a running nose banging your car window, or a
+                    handicapped old man asking for alms. Begging is one of the most serious social issues in India.
+                    Giving beggars money will only provide a very short-term solution to a long-standing problem. By
+                    treating beggars with dignity and working with local charities and shelters, one can make a
+                    difference.
                     <br><br>
 
-                    “Charity breeds poverty. But investment creates wealth.” This simple yet potent thought led to the ideation of the "Beggar Transformation" incentive by the Helping Hut Ngo. The initiative aims to rehabilitate beggars by providing them with food, counseling, and means to employment. A man in Dwarka who used to be a tailor had resorted to begging for survival. Helping Hut Ngo came forward to help him with a sewing machine and lead a dignified life.
-                    
+                    “Charity breeds poverty. But investment creates wealth.” This simple yet potent thought led to the
+                    ideation of the "Beggar Transformation" incentive by the Helping Hut Ngo. The initiative aims to
+                    rehabilitate beggars by providing them with food, counseling, and means to employment. A man in
+                    Dwarka who used to be a tailor had resorted to begging for survival. Helping Hut Ngo came forward to
+                    help him with a sewing machine and lead a dignified life.
+
                     <br><br>
-                    The idea behind the initiative is to reform and transform the livelihood and give the beggars dignity and respect, which will be a huge game-changer in their lives. 
+                    The idea behind the initiative is to reform and transform the livelihood and give the beggars
+                    dignity and respect, which will be a huge game-changer in their lives. 
 
                 </p>
             </div>
         </section>
 
-    <footer></footer>
-    <script src="footer-new.js"></script>
-    <div class="header" style="background-color: gray;">
-        <marquee behavior="" direction="left" >
-          <li>Ensuring basic needs through positive deeds</li>
-        </marquee>
-      </div>
+        <footer></footer>
+        <script src="footer-new.js"></script>
+        <script src="CELEBRATIONS.js"></script>
+        <div class="header" style="background-color: gray;">
+            <marquee behavior="" direction="left">
+                <li>Ensuring basic needs through positive deeds</li>
+            </marquee>
+        </div>
 </body>
+
 </html>
