@@ -2,207 +2,481 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>What Our Client</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/c913d2b7f1.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" /> -->
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="footer-new.css">
-  <!-- animated slider -->
-  <link rel="stylesheet" href="css/animated-slider.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="navbar-new.css"> -->
+    <!-- <link rel="stylesheet" href="footer-new.css"> -->
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest"> -->
+
+    <title>Team Representatives</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c913d2b7f1.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="footer-new.css">
+    <link rel="stylesheet" href="css/animated-slider.css">
+    <link rel="stylesheet" href="navbar-new.css">
+    <style>
+
+        .paras{
+            font-size: 1rem;
+            color: white;
+        }
+        .head{
+            text-align: center;
+            margin: 2% 0;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 770px) {
+            .head{
+                margin: 5% 0;
+            }
+        }
+
+        .sliders{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            /* margin: 0 25%; */
+            margin-left: 33%;
+            margin-bottom: 5%;
+        }
+
+        .sliderbtns{
+            margin: 0 auto;
+            width: fit-content;
+            /* height: 3%; */
+            /* background-color: wheat; */
+            /* padding: 0.8%; */
+            border-radius: 50%;
+        }
+
+        .inbtns{
+            padding: 50%;
+            border-radius: 25%;
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1551px) {
+            .sliders{
+                margin-top: 2%;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+            .sliders{
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width:361px) {
+            .sliders{
+                margin: 0 auto;
+                margin-top: 20%;
+                margin-bottom: 2%;
+            }
+
+            .paras{
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- navbar -->
-
-
-  <div class="header">
-    <marquee behavior="" direction="left">
-        <li>Ensuring basic needs through positive deeds</li>
-    </marquee>
-</div>
-<div class="row-1">
-<nav class="navbar-1" id="nav"></nav>
-<script src="navbar-new.js"></script>
-
-
-
-  <!-- testimonial area Start -->
-  <div class="testimonial-section sbs-testimonial-section pd-top-105 pd-bottom-120"
-    style="background-image:url(assets/img/bg/1h3.png);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 pd-xl-5 order-lg-12 align-self-center ">
-          <div class="section-title style-two mb-0">
-            <h2 class="title">Team <span>Representatives</span></h2>
-            <p>Here is our team of the NGO.</p>
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="sbs-testimonial-slider">
-            <div class="choose_slider">
-              <div class="choose_slider_items">
-                <ul id="testimonial-slider">
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/4.png" alt="client">
-                      <div class="media-body">
-                        <h6>0#</h6>
-                        <p class="designation">designation</p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/5.png" alt="client">
-                      <div class="media-body">
-                        <h6>1#</h6>
-                        <p class="designation">designation</p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/6.png" alt="client">
-                      <div class="media-body">
-                        <h6>2#</h6>
-                        <p class="designation">designation</p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/4.png" alt="client">
-                      <div class="media-body">
-                        <h6>3#</h6>
-                        <p class="designation">designation</p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/5.png" alt="client">
-                      <div class="media-body">
-                        <h6>4#</h6>
-                        <p class="designation">designation </p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/6.png" alt="client">
-                      <div class="media-body">
-                        <h6>5#</h6>
-                        <p class="designation">designation</p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                  <li class="current_item">
-                    <div class="media"> <img class="media-left" src="img/5.png" alt="client">
-                      <div class="media-body">
-                        <h6>last#</h6>
-                        <p class="designation">Branding </p>
-                        <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                      </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.nulla doloribus id sint laboriosam voluptatum!.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="sbs-arrowleft"><a id="btn_next" href="#"><i class="fa fa-long-arrow-left"></i></a></div>
-            <div class="sbs-arrowright"><a id="btn_prev" href="#"><i class="fa fa-long-arrow-right"></i></a></div>
-          </div>
-        </div>
-      </div>
+    <div class="header" style="background-color: gray;">
+        <marquee behavior="" direction="left">
+            <li>Ensuring basic needs through positive deeds</li>
+        </marquee>
     </div>
-  </div>
-  <!-- testimonial area End -->
+    <div class="row-1">
+        <nav class="navbar-1">
 
-  <!-- footer -->
-  
-  <div class="footer" id="footer-new">
-    <div class="inner-footer">
-        <div class="footer-items" style="padding:0 10px;">
-            <h3 style="font-size: 20px;">Helping Hut</h3>
-            <p>Helping Hut is a not for profit non government organization with the visions like helping poor in any
-                way possible, stopping beggary
-                by giving them some occupation and helping poor kids in getting education.</p>
-            <div class="verified-by">
-                <h6 class="verified_heading">Verified by</h6>
-                <div class="verified_logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/NITI_Aayog_logo.svg/1200px-NITI_Aayog_logo.svg.png"
-                        alt="NITI AAYOG">
-                    <img src="https://ngodarpan.gov.in/assets/images/Darpan-logo.png" alt="NGO Darpan">
+        </nav>
+        <div class="head">
+            <h1>Team Representatives</h1>
+        </div>    
+        <div
+            style="background-image:url(assets/img/bg/1h3.png);">
+            <div class="container">
+                <!-- style="margin-bottom: 20% ;" -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="sbs-testimonial-slider"
+                         style="height: 410px;">
+                            <div class="choose_slider">
+                                <div class="choose_slider_items">
+                                    <ul id="testimonial-slider">
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Ajay (Team Gwalior Coordinator).png"
+                                                    alt="Ajay Pratap Singh (Team Gwalior coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Ajay Pratap Singh</h6>
+                                                    <p class="designation">Team Gwalior coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras">A native of Gwalior, Madhya Pradesh, and an engineering student at MITS,
+                                                Gwalior. Ajay is currently coordinating team Gwalior with his full
+                                                efforts. He is a hard-working social reformer and selflessly works for
+                                                the unprivileged people of our society through this organization.
+                                                According to him, It's one of the biggest pleasures of his life to be a
+                                                part of this organization.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Raghvendra Pratap Singh (Founder & President).png"
+                                                    alt="Raghvendra Pratap Singh ">
+                                                <div class="media-body">
+                                                    <h6>Raghvendra Pratap Singh </h6>
+                                                    <p class="designation">Founder & President</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">A 19-year-old entrepreneur cum activist with multi-ideas. He is a native
+                                                of a small village in Uttar Pradesh and currently pursuing his studies
+                                                in Delhi. Raghvendra is also a freelancer Poet and technology
+                                                enthusiast. He has the vision of making India a beggar-free country
+                                                where every single person has a job or is employed to earn their bread
+                                                and butter instead of begging and begging should never be an option to
+                                                earn a livelihood. With his team’s efforts, he has launched countless
+                                                drives that distributed over 7500 items and impacted the lives of 20,000
+                                                people.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left" src="Prerna Raj (Secretary).png"
+                                                    alt="Prerna Raj">
+                                                <div class="media-body">
+                                                    <h6>Prerna Raj</h6>
+                                                    <p class="designation">Secretary</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She is an electronics engineering graduate from the University of Delhi
+                                                and belongs to Patna, Bihar. Her enthusiastic participation in different
+                                                domains led her to become a core team member of different societies in
+                                                college, like literature, culture, and other clubs, and she has held
+                                                different positions of responsibility. Being the co-founder of this
+                                                organization, she has been actively involved in NGO's work and has been
+                                                through the process and every bit of it has been the biggest pride for
+                                                her. She believes that through consistency, motivation, and discipline,
+                                                one can achieve anything and everything.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Mohit Nagar (Treasurer).png" alt="client">
+                                                <div class="media-body">
+                                                    <h6>Mohit Nagar</h6>
+                                                    <p class="designation">Treasurer</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">He is a graduate of the University of Delhi in Chemistry and a native of
+                                                Kota, Rajasthan. Mohit is associated with this organization from day
+                                                one. In the last two years, he has gained a lot of work experience as a
+                                                treasurer in this organization, and almost every day he has learned
+                                                something new and creative by doing interaction with different types of
+                                                people. </p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left" src="Asha Yadav (Trustee).png"
+                                                    alt="Asha Yadav">
+                                                <div class="media-body">
+                                                    <h6>Asha Yadav</h6>
+                                                    <p class="designation">Trustee</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She is a good social worker as well as a good housewife. Ignoring his
+                                                age, being ready to serve society day and night is one of his biggest
+                                                features. Her biggest strength is working with a team and with young
+                                                children. She is known as a conscientious social worker in Dwarka,
+                                                Delhi, and hails from a village in Haryana.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Shubham Agarwal (Trustee).png" alt="client">
+                                                <div class="media-body">
+                                                    <h6>Shubham Agarwal</h6>
+                                                    <p class="designation">Trustee</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">He is a Physics graduate from Delhi University and is a native of the
+                                                small town of Uttar Pradesh. He is a physically challenged person but
+                                                his dedication and perseverance towards society enable him to dedicate
+                                                his time to the organization. He actively participates in many
+                                                activities of society and also uplifts the standards. Shubham provides
+                                                all his skills to uplift our NGO and serve the needy.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left" src="Rajni Chahal (HR).png"
+                                                    alt="client">
+                                                <div class="media-body">
+                                                    <h6>Rajni Chahal</h6>
+                                                    <p class="designation">HR</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">Rajni, a native of Delhi, is a housewife and joined the organization as a
+                                                volunteer, but she soon managed to take up a human resource position in
+                                                this organization due to her remarkable communication skills. For a long
+                                                time till now she has been continuously managing the team with the
+                                                support of the President and others</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Princy ( Content Team Coordinator).png" alt="Princy">
+                                                <div class="media-body">
+                                                    <h6>Princy Saxena</h6>
+                                                    <p class="designation">Content team coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She is an engineering student at MITS Gwalior and a native of Bhopal,
+                                                Madhya Pradesh. Participating in various institute-level societies and
+                                                clubs taught us teamwork and leadership. She loves interacting with
+                                                people and helping them in all possible ways, which is the basic reason
+                                                for her actively volunteering for the organization. She has a special
+                                                interest in creative content writing and has been leading the content
+                                                team of this organization.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Sakshi (Social Media Coordinator).png"
+                                                    alt="Sakshi (Social Media Coordinator).png">
+                                                <div class="media-body">
+                                                    <h6>Sakshi Kumari</h6>
+                                                    <p class="designation">Social Media Coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She has forever been in love with animals and helping the needy. Coming
+                                                from a family where her mom didn't even like animals, to her now,
+                                                helping them throughout is how she has changed her surroundings. She
+                                                believes that kindness and empathy are the things that make us human.
+                                                She's the social media head of this organization and helping the needy
+                                                has made her goal even clearer.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Survi Tiwari (Social Media Sub-Coordinator).png"
+                                                    alt="Survi Tiwari (Social Media Sub-Coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Survi Tiwari</h6>
+                                                    <p class="designation">Social Media Sub-Coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She is a National Service Scheme (NSS) cadet and a graduate of
+                                                mathematics honors from Deen Dayal Upadhyaya Gorakhpur University. She
+                                                is putting effort into making a better society by helping the needy
+                                                through this organization. She is a native of Gorakhpur, Uttar Pradesh.
+                                                Now she is managing the social media team as a sub-coordinator.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Tahseen (Graphics Team Coordinator).png"
+                                                    alt="Tahseen (Graphics Team Coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Tahseen Kainat</h6>
+                                                    <p class="designation">Graphics Team Coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">Final-year undergraduate student of IPCW, Delhi University, and a native
+                                                of Muzaffarpur, Bihar. She is a blend of charm and resilience. From his
+                                                razor-sharp wit to his trustworthy persona, while others work their way
+                                                towards being different, she strives towards making a difference. She is
+                                                the graphic coordinator of this organization. Her passion and energy are
+                                                unparalleled. She is putting all her efforts into helping others.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Harshita (Event Management Team Coordinator).png"
+                                                    alt="Harshita (Event Management Team Coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Harshita Vishwakarma </h6>
+                                                    <p class="designation">Event Management Team Coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">Engineering student at MITS and a native of Gwalior, Madhya Pradesh. She
+                                                is an NSS cadet and student volunteer working for various societal and
+                                                environmental causes. She loves to meet and interact with people from
+                                                underprivileged sections of society, especially children, and to work
+                                                for them. Currently, she is working as a Coordinator of the Event
+                                                management team.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Prerona Jana (Internship Head).png" alt="Prerona Jana">
+                                                <div class="media-body">
+                                                    <h6>Prerona Jana</h6>
+                                                    <p class="designation">Internship Head</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">Joined as an intern but is now leading the internship team of this
+                                                organization. She is a native of Calcutta, West Bengal, and a diligent
+                                                college student. As per his experience, after joining this organization,
+                                                he got the opportunity to meet and work with people from different
+                                                backgrounds and ages, which has taught him a lot and this experience
+                                                will be useful for him for a lifetime.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Himanshi (Special Day Celebration Coordinator).png"
+                                                    alt="Himanshi (Special Day Celebration Coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Himanshi Sharma</h6>
+                                                    <p class="designation">Special Day Celebration Coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">A college student with good management skills. She is a native of Dwarka,
+                                                Delhi, and currently is a coordinator of the Special Day Celebration.
+                                                According to Himanshi, she loves the way kids welcome her while she goes
+                                                to teach them and enthusiastically waits every week to learn something
+                                                new from her. She’ll try her best to help every child so that they can
+                                                achieve their dreams.</p>
+                                        </li>
+
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Kajal Gahlot (Udaan Street School Coordinator).png"
+                                                    alt="Kajal Gahlot (Udaan street school coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Kajal Gahlot</h6>
+                                                    <p class="designation">Udaan street school coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">She is a postgraduate in Literature and, through a platform like this
+                                                organization, manages to work for unprivileged people. Through her
+                                                management skills, she was able to handle the position of coordinator
+                                                (Udaan Street School). She closely analyses the requirements of students
+                                                and works accordingly. She has been a part of Team Dwarka and is serving
+                                                unprivileged people wholeheartedly.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Shivangi (Video editing Coordinator).png"
+                                                    alt="Shivangi Sikarwar (Video editing team coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Shivangi Sikarwar</h6>
+                                                    <p class="designation">Video editing team coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">An engineering student of MITS Gwalior, she is quite simple and down to
+                                                earth. Her family is a little more conservative. So, she knows or
+                                                understands the things that happen when someone doesn't get the things
+                                                they want, the support they want, food to eat, etc. She feels grateful
+                                                to be a part of such an amazing team and serves there wholeheartedly.
+                                                Currently, she is coordinating the video editing team of this
+                                                organization.</p>
+                                        </li>
+                                        <li class="current_item">
+                                            <div class="media"> <img class="media-left"
+                                                    src="Saloni (Team Delhi Coordinator).png"
+                                                    alt="Saloni Chahal (Team Delhi coordinator)">
+                                                <div class="media-body">
+                                                    <h6>Saloni Chahal</h6>
+                                                    <p class="designation">Team Delhi coordinator</p>
+                                                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                            class="fa fa-star"></i> </span>
+                                                </div>
+                                            </div>
+                                            <p class="paras" style="color: white ;">Graduate in psychology from Jesus and Mary College, Delhi University, and
+                                                a native of Delhi. She has been an NCC cadet and has thus
+                                                enthusiastically worked for society in not just one but many ways. She
+                                                puts in her experience and energy towards helping others through the
+                                                medium of this organization. She is coordinating Team Delhi as well as
+                                                the Instagram handle of this organization.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="sbs-arrowright"><a id="btn_prev" href="#"><i
+                                class="fa fa-long-arrow-left"></i></a></div>
+                            <div class="sbs-arrowleft"><a id="btn_next" href="#"><i
+                                        class="fa fa-long-arrow-right"></i></a></div> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-items" style="max-width:200px;">
-            <h2 class="footer_heading">Quick Links</h2>
-            <div class="border"></div>
-            <ul class="footer_list">
-                <li class="list-list-item"><a class="" href="TermsAndConditions.html">Terms and Conditions</a></li>
-                <li class="list-list-item"><a class="" href="privacyPolicy.html">Privacy Policy</a></li>
-<li class="list-list-item"><a class="" href="publications/index.html">Publications</a></li>
-                <li class="list-list-item"><a class="" href="partnership.html">Partners</a></li>
-            </ul>
+        <div class="sliders">
+        <div class="sbs-arrowright sliderbtns">
+            <button class="inbtns" id="btn_prev" href="#"><i
+            class="fa fa-long-arrow-left"></i></button></div>
+        <div class="sbs-arrowleft sliderbtns"><button class="inbtns" id="btn_next" href="#"><i
+                    class="fa fa-long-arrow-right"></i></button></div>
         </div>
-        <div class="footer-items" style="max-width:200px;">
-            <h2 class="footer_heading">Get Involved</h2>
-            <div class="border"></div>
-            <ul class="footer_list">
-                <li><a class="" href="careers.html">Careers</a></li>
-                <li><a class="" href="partnership.html">Partnership</a></li>
-                <li><a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">Volunteer</a></li>
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h2 class="footer_heading" id="botbot">Contact Us</h2>
-            <div class="border"></div>
-            <ul class="footer_list" style="font-size:14px;">
-                <li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Plot No.: 147 A, Street No. 5,
-                    D-Block, Bharat Vihar, Kakrola, Dwarka, Delhi - 110078</li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+91 8924879117</li>
-                <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;<a href="mailto:contact@helpinghutngo.in" style="text-decoration: none; color: rgb(211,211,211)">contact@helpinghutngo.in</a></li>
-            </ul>
-            <div class="social-media">
-                <a href="https://www.facebook.com/helpinghutngo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/helping_hut/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/c/HelpingHut" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                <a href="https://twitter.com/helping_hut" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/search/results/all/?keywords=helping%20hut%20&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bf1312c1-105c-4871-8895-632e95d4592c&sid=7cg" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://t.me/helpinghutngo" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">Copyright ©
-        <script>document.write(new Date().getFullYear())</script> Helping Hut NGO. All rights reserved.
-    </div>
-
-  <script src="footer-new.js"></script>
-  <script src="js/jquery-2.2.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.magnific-popup.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.cssslider.min.js"></script>
-  <script src="js/main.js"></script>
+        <footer></footer>
+        <script src="footer-new.js"></script>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.cssslider.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="navbar-new.js"></script>
 </body>
 
 </html>
