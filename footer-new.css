@@ -121,16 +121,15 @@
 }
 
 #myBtnn{
-    font-size: 140%;
-    width: 10%;
+    font-size: 1.5rem;
+    width: 3em;
     margin-right: 2%;
     margin-left: 88%;
+    box-shadow: 2px 1px 5px white; 
 }
-@media screen and (max-width: 976px) {
+/* @media screen and (max-width: 976px) {
     #myBtnn{
-        font-size: 120%;
-        width: 30%;
-        margin-right: 1%;
-        margin-left: 69%;
-    }
+        font-size: 1.5rem;
+        box-shadow: 2px 1px 5px white; 
+    } */
 }
