@@ -190,7 +190,103 @@
 
   <section id="testimonials">
     <h1 style="font-size: 2rem ;">Our Collaborators</h1>
-    <div class="marquee">
+    <div class="hk-jstb-slider">
+<div class="hk-jstb-slide-track" id="marquee-hkt-2423">
+</div>
+</div>
+<script type="text/javascript">
+let url = 'https://sheets.googleapis.com/v4/spreadsheets/1OdlL7RdACokBWkIqXbrB1J2FlRTt0rAAwtRHVjt8Nfw/values/Sheet1?key=AIzaSyDAKBMHK8XPxpL-UxLqKYFKx9HUf-3a5vU';
+fetch(url).then(res => res.json()).then(out =>  handlejsonresponse(out))
+.catch(err => { throw err });					
+function handlejsonresponse(res){
+    var slidescnts = res['values'].length - 1;
+    var care4html = `<style>
+.hk-jstb-slider {
+  height: 180px;
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.hk-jstb-slider::before,
+.hk-jstb-slider::after{
+  position:absolute;
+  background-image:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  content:'';
+  height:100%;
+  width:25%;
+  z-index:2;pointer-events:none;
+}
+.hk-jstb-slider::before{
+  left:0;
+  top:0;
+}
+.hk-jstb-slider::after{
+  right:0;
+  top:0;
+  transform:rotateZ(180deg);
+}
+/*  IMPORTANT CODE BELOW */
+.hk-jstb-slide-track {
+    width: calc(140px * `+slidescnts+`);
+    display: flex;
+    height: inherit;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    animation: scroll `+ res['values'][0][5] +`s linear infinite;
+}
+.hk-jstb-slide {
+    width: 100px;
+    height: 100px;
+    padding:20px;
+    display: grid;
+    place-items: center;
+    transition:0.5s;
+    cursor:pointer;
+}
+.hk-jstb-slide:hover{
+  transform:scale(0.9);
+}
+.hk-jstb-slide-track:hover{
+   animation-play-state: paused;
+}
+.hk-jstb-slide>img{
+    max-width:100px;
+    aspect-ratio:1 / 1;
+    border-radius:50%;
+}
+.hk-jstb-slide-track > a{
+    text-decoration:none;
+    color:inherit;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-140px * `+slidescnts+`));
+  }
+}
+
+</style>`;
+            
+     for (let i = 1; i < res['values'].length; i++) {
+
+         care4html += `<a href="`+res['values'][i][3]+`" target="_blank"><div class="hk-jstb-slide">
+            <img src="`+res['values'][i][2]+`">
+            <span>`+res['values'][i][1]+`</span>
+        </div></a>`;
+     }
+     document.getElementById('marquee-hkt-2423').innerHTML = care4html + care4html;
+}				
+		</script>
+
+    
+<!--     <div class="marquee">
       <div class="marquee--inner">
         <span>
           <div class="orb">
@@ -281,7 +377,7 @@
           </div>
         </span>
       </div>
-    </div>
+    </div> -->
 
   </section>
 
