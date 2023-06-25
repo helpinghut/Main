@@ -209,6 +209,8 @@ function handlejsonresponse(res){
   display: grid;
   place-items: center;
   overflow: hidden;
+  margin-top: 20px;
+    margin-bottom: 40px;
 }
 .hk-jstb-slider::before,
 .hk-jstb-slider::after{
@@ -242,14 +244,15 @@ function handlejsonresponse(res){
 .hk-jstb-slide {
     width: 100px;
     height: 100px;
-    padding:20px;
     display: grid;
     place-items: center;
-    transition:0.5s;
-    cursor:pointer;
+    transition: 0.5s;
+    cursor: pointer;
+    transform: translate(0px, -50px);
+    margin: 20px;
 }
 .hk-jstb-slide:hover{
-  transform:scale(0.9);
+  transform:translateY(-40px);
 }
 .hk-jstb-slide-track:hover{
    animation-play-state: paused;
