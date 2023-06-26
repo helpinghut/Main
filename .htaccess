@@ -1,0 +1,23 @@
+ErrorDocument 400 400
+ErrorDocument 401 401
+ErrorDocument 404 404
+ErrorDocument 403 403
+ErrorDocument 503 503
+
+RewriteEngine On
+
+## add trialing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+RewriteRule ^abcd/(/?.*)/$ index.html?page=$1 [NC,L,QSA]
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+
+
+RewriteRule ^p/(/?.*)$ pages/$1 [NC,L,QSA]
+
+Options -Indexes
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
