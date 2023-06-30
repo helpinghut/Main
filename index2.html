@@ -11,7 +11,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-        <link rel="manifest" href="assets/images/site.webmanifest">
+        <!--<link rel="manifest" href="assets/images/site.webmanifest">-->
         <link rel="image_src" href="/favicon.ico" />
         <meta property="og:site_name" content="HK Technical" />
         <meta property="og:title" content="Helping Hut NGO" />
@@ -33,9 +33,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Handlee&family=Merriweather:wght@300&family=Patrick+Hand&display=swap" rel="stylesheet">
         
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" crossorigin="anonymous" type="2de9c3140a62de8145494c7b-text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <style>
         body{
             font-size:14px;
@@ -592,7 +591,7 @@ ul.dropdown-menu.show {
         <!-- text Cards -->
         <div class="row m-2  mx-0 g-2 mb-3 gx-5 text-center">
             <div class="col-lg-3 ">
-                <a href="#">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEHQqLofmFBpi5eklRsuJTPxZP97VRwCqeEo6846wF3LBEAg/viewform">
                 <div class="row hk-card rounded-3 text-danger">
                     <div class="col-lg-12 p-4 py-5 ">
                         <h1>JOIN US</h1>
@@ -601,7 +600,7 @@ ul.dropdown-menu.show {
                 </a>
             </div>
             <div class="col-lg-3 ">
-                <a href="#">
+                <a href="https://pages.razorpay.com/pl_IlDOKjBH2DCi3h/view">
                 <div class="row hk-card rounded-3 text-success">
                     <div class="col-lg-12 p-4 py-5 ">
                         <h1>DONATE</h1>
@@ -610,7 +609,7 @@ ul.dropdown-menu.show {
                 </a>
             </div>
             <div class="col-lg-3 ">
-                <a href="#">
+                <a href="https://helpinghutngo.in/careers.html">
                 <div class="row hk-card rounded-3 text-dark">
                     <div class="col-lg-12 p-4 py-5 ">
                         <h1>CAREER</h1>
@@ -619,7 +618,7 @@ ul.dropdown-menu.show {
                 </a>
             </div>
             <div class="col-lg-3 ">
-                <a href="#" class="share-this">
+                <a href="//wa.me/?text=https://helpinghutngo.in/" class="share-this">
                 <div class="row hk-card rounded-3 text-info">
                     <div class="col-lg-12 p-4 py-5 ">
                         <h1>Invite Friends</h1>
@@ -674,7 +673,7 @@ ul.dropdown-menu.show {
                 <div class="row hk-card" style="background: url(https://www.copuhsr.in/images/about-bg.jpg);">
                     <div class="col px-2 py-5 about-column">
                         <div class="container">
-                            <div class="row">
+                            <div class="row" id="about-us">
                                <div class="col-md-10 offset-md-1">
                                   <div class="aboutheading">
                                      <h2>About <strong class="text-dark">the NGO</strong></h2>
@@ -867,7 +866,99 @@ ul.dropdown-menu.show {
         </div>
         
 
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content bg-transparent">
+        
+      <div class="modal-body text-center" style="margin: auto;">
+          
+         <div>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 2px solid black; border-radius: 50%; position: absolute; right: 0; margin-right: 17px;"></button>
+        <img src="https://lh3.googleusercontent.com/d/12qAPTO6FCXAahl-UNQCFIJT50b8jUqb1=s1000" style="width:100%;" >
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
+let url = 'https://sheets.googleapis.com/v4/spreadsheets/1OdlL7RdACokBWkIqXbrB1J2FlRTt0rAAwtRHVjt8Nfw/values/Sheet2?key=AIzaSyDAKBMHK8XPxpL-UxLqKYFKx9HUf-3a5vU';
+    fetch(url).then(res => res.json()).then(out =>  handlejsonresponse(out))
+    .catch(err => { throw err });
+function handlejsonresponse(navraw){
+    var navbar = {};
+    var html_caro_btn = '';
+    var html_caro_inner = '';
+    for (let i = 1; i < navraw['values'].length; i++) {
+        
+        //0 : "nav id" 1 : "nav title" 2 : "nav link" 3 : "nav parent id" 4 : "(publish=1)" 5 : "nav position" 6 : "child"
+        //create navbar clean object array
+        if (navraw['values'][i][4] === '1') {
+            if (navraw['values'][i][3] === '0') {
+              navbar[navraw['values'][i][0]] = navraw['values'][i];
+            } else {
+              if (!navbar[navraw['values'][i][3]]['childlength']) {
+                navbar[navraw['values'][i][3]]['childlength'] = 0;
+                navbar[navraw['values'][i][3]]['child'] = [];
+              }
+              navbar[navraw['values'][i][3]]['childlength']++;
+              navbar[navraw['values'][i][3]]['child'].push(navraw['values'][i]);
+            }
+        }
+        
+        //8 : "corousel id" 9 : "title" 10 : "subtitle" 11 : "image" 12 : "publish" 13 : "interval"
+        //create topnav html
+        
+        //make corousel
+        
+        if (navraw['values'][i][8] && navraw['values'][i][12] === '1') {  //publish ==1
+            html_caro_btn += `<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="`+i+`"`;
+            html_caro_btn += (i===1) ? ('class="active" aria-current="true"') : '';
+            html_caro_btn += `aria-label="`+navraw['values'][i][9]+`"></button>`;
+            
+            html_caro_inner+= `<div class="carousel-item hk-slide-cover `;
+            html_caro_inner += (i===1) ? ('active') : '';
+            html_caro_inner += `" data-bs-interval="`;
+            html_caro_inner += (navraw['values'][i][13]===0) ? ('1000') : navraw['values'][i][13];
+            html_caro_inner += `">
+                              <img src="`+ navraw['values'][i][11]+`" data-src="`+ navraw['values'][i][11]+`" class="lazyload d-block w-100" alt="`+ navraw['values'][i][9]+`">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>`+ navraw['values'][i][9]+`</h5>
+                                <p>`+ navraw['values'][i][10]+`</p>
+                              </div>
+                            </div>`;
+        }
+        
+    }
+    document.getElementById('carousel-indicators-hkt3637').innerHTML = html_caro_btn;
+    document.getElementById('carousel-inner-hkt3637').innerHTML = html_caro_inner;
+
+    
+    var nav_care4html = '';
+    Object.entries(navbar).forEach(function([key, bar]) {
+        if (!bar['childlength']) {
+            nav_care4html +=`<li class="nav-item">
+                      <a class="nav-link hk-link" aria-current="page" href="`+bar[2]+`">`+bar[1]+`</a>
+                    </li>`;
+        }else{
+            nav_care4html += `<li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            `+bar[1]+`
+                          </a>
+                          <ul class="dropdown-menu">`;
+            for (let j = 0; j < bar['child'].length; j++) {
+               nav_care4html += `<li><a class="dropdown-item" href="`+bar['child'][j][2]+`">`+bar['child'][j][1]+`</a></li>`; 
+            }              
+            nav_care4html += `</ul>
+                        </li>`;
+        }
+    });
+    document.getElementById('hkt-auto-load-nav-253').innerHTML = nav_care4html;
+}
+
 
 if(typeof jQuery=='undefined') {
     var hkt_jqueryloadScript = document.createElement('script');
@@ -881,146 +972,27 @@ if(typeof jQuery=='undefined') {
     hkt_auth_in_jqCode_n_prdctmn();
 }
 function hkt_auth_in_jqCode_n_prdctmn(){
-    let url = 'https://sheets.googleapis.com/v4/spreadsheets/1OdlL7RdACokBWkIqXbrB1J2FlRTt0rAAwtRHVjt8Nfw/values/Sheet2?key=AIzaSyDAKBMHK8XPxpL-UxLqKYFKx9HUf-3a5vU';
-    fetch(url).then(res => res.json()).then(out =>  handlejsonresponse(out))
-    .catch(err => { throw err });
-    function handlejsonresponse(navraw){
-        var navbar = {};
-        var html_caro_btn = '';
-        var html_caro_inner = '';
-        for (let i = 1; i < navraw['values'].length; i++) {
-            
-            //0 : "nav id" 1 : "nav title" 2 : "nav link" 3 : "nav parent id" 4 : "(publish=1)" 5 : "nav position" 6 : "child"
-            //create navbar clean object array
-            if (navraw['values'][i][4] === '1') {
-                if (navraw['values'][i][3] === '0') {
-                  navbar[navraw['values'][i][0]] = navraw['values'][i];
-                } else {
-                  if (!navbar[navraw['values'][i][3]]['childlength']) {
-                    navbar[navraw['values'][i][3]]['childlength'] = 0;
-                    navbar[navraw['values'][i][3]]['child'] = [];
-                  }
-                  navbar[navraw['values'][i][3]]['childlength']++;
-                  navbar[navraw['values'][i][3]]['child'].push(navraw['values'][i]);
-                }
-            }
-            
-            //8 : "corousel id" 9 : "title" 10 : "subtitle" 11 : "image" 12 : "publish" 13 : "interval"
-            //create topnav html
-            
-            //make corousel
-            
-            if (navraw['values'][i][8] && navraw['values'][i][12] === '1') {  //publish ==1
-            console.log(navraw['values'][i]);
-                html_caro_btn += `<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="`+i+`"`;
-                html_caro_btn += (i===1) ? ('class="active" aria-current="true"') : '';
-                html_caro_btn += `aria-label="`+navraw['values'][i][9]+`"></button>`;
-                
-                html_caro_inner+= `<div class="carousel-item hk-slide-cover `;
-                html_caro_inner += (i===1) ? ('active') : '';
-                html_caro_inner += `" data-bs-interval="`;
-                html_caro_inner += (navraw['values'][i][13]===0) ? ('1000') : navraw['values'][i][13];
-                html_caro_inner += `">
-                                  <img src="`+ navraw['values'][i][11]+`" data-src="`+ navraw['values'][i][11]+`" class="lazyload d-block w-100" alt="`+ navraw['values'][i][9]+`">
-                                  <div class="carousel-caption d-none d-md-block">
-                                    <h5>`+ navraw['values'][i][9]+`</h5>
-                                    <p>`+ navraw['values'][i][10]+`</p>
-                                  </div>
-                                </div>`;
-            }
-            
+    $(document).ready(function(e) {
+        var currentDate = new Date();
+        var targetDateA = new Date('2023-07-01');
+        
+        if (currentDate < targetDateA) {
+          // Run your JavaScript code here
+          $("#staticBackdrop").modal("show");
+          console.log('Current date is less than July 1, 2023.');
+        } else {
+          console.log('Current date is not less than July 1, 2023.');
         }
-        console.log(html_caro_inner)
-        document.getElementById('carousel-indicators-hkt3637').innerHTML = html_caro_btn;
-        document.getElementById('carousel-inner-hkt3637').innerHTML = html_caro_inner;
 
         
-        var nav_care4html = '';
-        Object.entries(navbar).forEach(function([key, bar]) {
-            if (!bar['childlength']) {
-                nav_care4html +=`<li class="nav-item">
-                          <a class="nav-link hk-link" aria-current="page" href="`+bar[2]+`">`+bar[1]+`</a>
-                        </li>`;
-            }else{
-                nav_care4html += `<li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                `+bar[1]+`
-                              </a>
-                              <ul class="dropdown-menu">`;
-                for (let j = 0; j < bar['child'].length; j++) {
-                   nav_care4html += `<li><a class="dropdown-item" href="`+bar[2]+`">`+bar[1]+`</a></li>`; 
-                }              
-                nav_care4html += `</ul>
-                            </li>`;
-            }
-        });
-        document.getElementById('hkt-auto-load-nav-253').innerHTML = nav_care4html;
-    }
-    
-    
-
-    $(document).ready(function(e) {
-                //load_events();
     });
 }
-    function load_events(){
-    console.log('called');
-    $.ajax({
-    	url: 'https://alumni.copuhsr.in/api/essentials.php',
-      	type: 'post',
-      	data: {
-            'getEvents': "true",
-      	},
-        success:function(dataer){
-            console.log(dataer)
-            var event_body = '';
-            if(dataer.event){
-            for(var i = 0; i < dataer.event.length; i++){
-                event_body+=`<div class="item-event">
-                        		<a href="//alumni.copuhsr.in/p/event/read/`+dataer.event[i].ev_slug+`" target="_blank">
-                        			<span class="status">`+dataer.event[i].ev_occurance+`</span>
-                        			<span class="item-date">
-                        				<span class="item-month">`+dataer.event[i].ev_MM+`<br></span>
-                        				<span class="item-day">`+dataer.event[i].ev_dd+`</span>
-                        			</span>
-                        			<div>
-                        				<span class="item-title">`+dataer.event[i].ev_title+`</span>
-                        				<span class="item-text">`+dataer.event[i].ev_location+`</span>
-                        			</div>
-                        		</a>
-                        	</div>`;
-            }
-            }else{
-                event_body = 'No events found!';
-            }
-            $('.events-homeblock').html(event_body);
-            var news_body = '';
-            if(dataer.news){
-            for(var i = 0; i < dataer.news.length; i++){
-                news_body+=`<a href="//alumni.copuhsr.in/p/news/read/`+dataer.news[i].ns_slug+`" target="_blank">
-                                <div class="item-ellipsis border-bottom p-2">
-                                    <div class="float-end item-date text-muted" style="">
-                                        `+dataer.news[i].ns_dd+`
-                                    </div>
-                                    <div class="item-title fs-6 text-dark">
-                                         `+dataer.news[i].ns_title+`
-                                    </div>
-                                </div>
-                                </a>`;
-            }
-            }else{
-                news_body = 'No news found!';
-            }
-            $('.news-homeblock').html(news_body);
-        },
-        error: function(xhr, textStatus, error) {
-          console.log('There is some error in connection to server. Please, Contact Support service or Try again later.');
-        }
-    
-      });
-}
+
+
+
 
 </script>
+
 
         <footer>
         <div class="row hk-card mx-0">
