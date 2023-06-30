@@ -1031,15 +1031,17 @@ if(typeof jQuery=='undefined') {
 function hkt_auth_in_jqCode_n_prdctmn(){
     $(document).ready(function(e) {
         var currentDate = new Date();
-        var targetDateA = new Date('2023-06-01');
-        
-        if (currentDate < targetDateA) {
+        var openingDateA = new Date('2023-07-01');
+        var closeDateB = new Date('2023-07-02');
+        if (currentDate < openingDateA) {
           // Run your JavaScript code here
           $("#staticBackdrop").modal("show");
           console.log('Current date is less than July 1, 2023.');
-        } else {
+        } else if (currentDate > openingDateA && currentDate < closeDateB) {
             $("#staticBackdropB").modal("show");
-          console.log('Current date is not less than July 1, 2023.');
+            console.log('Current date is not less than July 1, 2023.');
+        } else  {
+            
         }
         
         const myModalEl = document.getElementById('staticBackdrop')
