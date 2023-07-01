@@ -1038,7 +1038,7 @@ function hkt_auth_in_jqCode_n_prdctmn(){
           $("#staticBackdrop").modal("show");
           console.log('Current date is less than July 1, 2023.');
         } else if (currentDate > openingDateA && currentDate < closeDateB) {
-            $("#staticBackdropB").modal("show");
+            $("#launchModal").modal("show");
             console.log('Current date is not less than July 1, 2023.');
         } else  {
             
@@ -1064,7 +1064,7 @@ function hkt_auth_in_jqCode_n_prdctmn(){
 
 
 // Set the target date and time
-var targetDate = new Date('2023-07-01T17:00:00');
+var targetDate = new Date('2023-07-01T00:00:00');
 
 // Update the countdown every second
 var countdownInterval = setInterval(updateCountdown, 1000);
