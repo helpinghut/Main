@@ -564,10 +564,25 @@
             div.hkt-cards:hover{
                 transform: scale(1.01); 
             }
+		    div.hkt-cards .card-body{
+			   position: absolute;
+			    background: white;
+			    width: 100%; 
+		    }
+	div.hkt-cards:hover .card-body{
+	    position: absolute;
+	    top: 0px;
+	    background: white;
+	    width: 100%;
+	}
+
+
+		    
             div.hkt-cards:hover .hkt-desc{
                 display:block;
                 z-index:2;
 		    height: auto;
+		    top: 81px;
             }
             </style>
 	<div class="row mt-5">
