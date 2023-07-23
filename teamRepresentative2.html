@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Helping Hut NGO</title>
+        <title>Team Representatives - Helping Hut NGO</title>
         <meta name="description" content="Ensuring basic needs through positive deeds." />
         <link rel="canonical" href />
         <meta name="author" content="Alumni Associal SDPGIPS Rohtak" />
@@ -436,94 +436,504 @@ ul.dropdown-menu.show {
             </nav>  
             </div>
         </div>
-        <!--<div class="row my-2 m-0">-->
-        <!--    <div class="col-lg-12 px-2 pt-2">-->
-        <!--    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">-->
-        <!--      <ol class="breadcrumb">-->
-        <!--        <li class="breadcrumb-item"><a href="/">Home</a></li>-->
-        <!--        <li class="breadcrumb-item active" aria-current="page">My Account</li>-->
-        <!--      </ol>-->
-        <!--    </nav>-->
-        <!--    </div>-->
-        <!--</div>-->
+
+
 <style>
-.item-ellipsis{
+	// font stuff
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+
+// colour stuff
+@white: #ffffff;
+@lightBG: #dce1df;
+@salmon: #ff6666;
+
+@teal: #0096a0;
+@tealMid: #0ebac7;
+@tealContrast: #33ffff;
+@tealShade:	#007c85;
+
+@darkGrey: #4f585e;
+
+body {
+  background: @lightBG;
+  color: @darkGrey;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a.btn {
+  background: @teal;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: @white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+}
+
+.no-touch a.btn:hover {
+  background: lighten(@teal,2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(@teal,2.5);
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+div.card {
+  background: @white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+
+  img {
+    max-width: 300px;
+  }
+  
+  .card__image-holder {
+    background: rgba(0,0,0,0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  div.card-title {
+    background: @white;
+    padding: 6px 15px 10px;
     position: relative;
-}
-.item-ellipsis:hover{
-    background-color:rgba(0,0,0,0.05);;
-}
-.item-ellipsis .item-date {
+    z-index: 0;
+    
+    a.toggle-info {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 32px;
+      
+      span {
+        background: @white;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 16px;
+        transition: all 0.15s 0s ease-out;
+        width: 12px;
+      }
+      
+      span.left {
+        right: 14px;
+        transform: rotate(45deg);
+      }
+      span.right {
+        left: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      margin: 0;
+      padding: 0;
+      
+      small {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+  div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  div.card-actions {
+  	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+    padding: 10px 15px 20px;
+    text-align: center;
+  }
+  
+  div.card-flap {
+    background: darken(@white,15);
     position: absolute;
-    right: 10px;
-}
-.item-ellipsis .item-title {
-    padding-right: 95px !important;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
     width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1;
+  }
+  div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2;
+  }
+  
 }
-.events-homeblock .item-event {
-    margin: 0;
-    border-bottom-color: rgba(0,0,0,0.05);
-    padding: 12px 20px;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 30px 10px 10px 20px;
-    position: relative;
-    overflow: hidden;
+
+div.cards.showing {
+  div.card {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
 }
-.events-homeblock .item-event .status {
-    float: right;
-    position: absolute;
-    font-size: 0.8em;
-    opacity: 0.8;
-    top: 10px;
-    right: auto;
-    color: rgba(0,0,0,0.5);
-    letter-spacing: 3px;
-    text-transform: uppercase;
+
+.no-touch  div.cards.showing {
+  div.card:hover {
+    opacity: 0.94;
+    transform: scale(0.92);
+  }
 }
-.events-homeblock .item-event .item-date {
-    float: left;
-    margin: 0 20px 30px 0;
-    color: rgba(0,0,0,0.9);
-    text-transform: uppercase;
-    text-align: center;
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+
+  div.card-title {
+    a.toggle-info {
+      background: @salmon !important;
+      span {
+        top: 15px;
+      }
+      span.left {
+        right: 10px;
+      }
+      span.right {
+        left: 10px;
+      }
+    }
+  }
+  div.card-flap {
+    background: @white;
+    transform: rotateX(0deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0s ease-out;
+  }
+  div.flap2 {
+    transition: all 0.3s 0.2s ease-out;
+  }
 }
-.events-homeblock .item-event .item-date {
-    float: left;
-    margin: 0 20px 30px 0;
-    color: rgba(0,0,0,0.9);
-    text-transform: uppercase;
-    text-align: center;
-}
-.events-homeblock .item-event .item-day {
-    font-size: 1.8em;
-    line-height: 24px;
-}
-.item-event .item-title {
-    font-size: 1.2em;
-    line-height: 1.25em;
-    padding: 0;
-    margin: 0;
-    color: rgba(0,0,0,0.85);
-}
-.events-homeblock .item-event .item-title {
-    display: block;
-    margin-bottom: 3px;
-}
-.item-event .item-text {
-    color: rgba(0,0,0,0.5);
-    font-size: 1.05em;
-}
- .item-event:hover {
-    background-color: rgba(0,0,0,0.05);
-}
+
+
+
 </style>
+<div class="cards">
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?beach" alt="beach" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?mountain" alt="mountain" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?field" alt="field" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?water" alt="water" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?river" alt="river" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?kite" alt="kite" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?underwater" alt="underwater" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?desert" alt="desert" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+	$(document).ready(function(){
+  var zindex = 10;
+  
+  $("div.card").click(function(e){
+    e.preventDefault();
+
+    var isShowing = false;
+
+    if ($(this).hasClass("show")) {
+      isShowing = true
+    }
+
+    if ($("div.cards").hasClass("showing")) {
+      // a card is already in view
+      $("div.card.show")
+        .removeClass("show");
+
+      if (isShowing) {
+        // this card was showing - reset the grid
+        $("div.cards")
+          .removeClass("showing");
+      } else {
+        // this card isn't showing - get in with it
+        $(this)
+          .css({zIndex: zindex})
+          .addClass("show");
+
+      }
+
+      zindex++;
+
+    } else {
+      // no cards in view
+      $("div.cards")
+        .addClass("showing");
+      $(this)
+        .css({zIndex:zindex})
+        .addClass("show");
+
+      zindex++;
+    }
+    
+  });
+});
+</script>
+
+
+
+
+	      
         <!-- Carousel -->
         <div class="row mx-0">
             <div class="col-lg-12 hk-carousel">
