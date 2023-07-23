@@ -685,7 +685,7 @@
               var hkt_jqueryloadScript = document.createElement('script');
               hkt_jqueryloadScript.type = 'text/javascript';
               hkt_jqueryloadScript.src = 'https://code.jquery.com/jquery-3.6.3.min.js';
-              hkt_jqueryloadScript.onload = hkt_auth_in_jqCode_n_prdctmn;
+              //hkt_jqueryloadScript.onload = hkt_auth_in_jqCode_n_prdctmn;
               document.getElementsByTagName("head")[0].appendChild(hkt_jqueryloadScript);
               // console.log('jquery loaded');
             } else {
@@ -693,78 +693,7 @@
               //hkt_auth_in_jqCode_n_prdctmn();
             }
 
-            function hkt_auth_in_jqCode_n_prdctmn() {
-              $(document).ready(function(e) {
-                var currentDate = new Date();
-                var openingDateA = new Date('2023-07-01');
-                var closeDateB = new Date('2023-08-02');
-                if (currentDate < openingDateA) {
-                  // Run your JavaScript code here
-                  $("#staticBackdrop").modal("show");
-                  console.log('Current date is less than July 1, 2023.');
-                } else if (currentDate > openingDateA && currentDate < closeDateB) {
-                  $("#launchModal").modal("show");
-                  console.log('Current date is not less than July 1, 2023.');
-                } else {}
-                const myModalEl = document.getElementById('staticBackdrop')
-                myModalEl.addEventListener('hidden.bs.modal', event => {
-                  $("#launchModal").modal("show");
-                  console.log("next"); // do something...
-                })
-                const myModalElB = document.getElementById('staticBackdropB')
-                myModalElB.addEventListener('hidden.bs.modal', event => {
-                  $("#launchModal").modal("show");
-                  console.log("next"); // do something...
-                })
-              });
-            }
-            // Set the target date and time
-            //var targetDate = new Date('2023-07-01T00:00:00');
-            // Update the countdown every second
-            //var countdownInterval = setInterval(updateCountdown, 1000);
 
-            function updateCountdown() {
-              // Get the current date and time
-              var currentDate = new Date();
-              // Calculate the time remaining
-              var timeRemaining = targetDate - currentDate;
-              // Check if the target date has passed
-              if (timeRemaining < 0) {
-                clearInterval(countdownInterval);
-                $('#launch-view-button').html(' < a href = "https://helpinghutngo.in/3rd-foundation-day.html"
-                  target = "_blank"
-                  class = "btn btn-secondary" > View < /a>');
-                  console.log('Countdown has ended.');
-                  return;
-                }
-                // Calculate the days, hours, minutes, and seconds
-                var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-                // Convert to two digits
-                var formattedDays = days.toLocaleString('en-US', {
-                  minimumIntegerDigits: 2
-                });
-                var formattedHours = hours.toLocaleString('en-US', {
-                  minimumIntegerDigits: 2
-                });
-                var formattedMinutes = minutes.toLocaleString('en-US', {
-                  minimumIntegerDigits: 2
-                });
-                var formattedseconds = seconds.toLocaleString('en-US', {
-                  minimumIntegerDigits: 2
-                });
-                // Display the countdown
-                var timedhtm = `
-																																				<div>
-																																					<span>` + formattedHours + `</span> : 
-																																					<span>` + formattedMinutes + `</span> : 
-																																					<span>` + formattedseconds + `</span>
-																																				</div>`;
-                $('#launch-view-button').html(timedhtm);
-                // console.log('Countdown:', days, 'days', hours, 'hours', minutes, 'minutes', seconds, 'seconds');
-              }
           </script>
           <footer>
             <div class="row hk-card mx-0">
